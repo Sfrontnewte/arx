@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="HandheldFriendly" content="true">
+
+        <!--[if (gt IE 9)|!(IE)]><!-->
+        <link href="assets/css/main.min.css" rel="stylesheet" type="text/css">
+        <!--<![endif]-->
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script>
+            (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
+        </script>
+    </head>
+
+    <body class="page">
+        <div class="overlay"></div>
+        <!-- header-->
+        <header class="header">
+            <div class="header__container container is-large">
+                <a class="header__logo" href="/">
+                    <img src="assets/img/general/logo.svg" alt=""><span>Пассажирские перевозки  <br> в Архангельске и по России</span>
+                </a>
+                <div class="header__actions"> <a class="header__phone" href="tel:+79004597887">+7 900 459 78 87</a>
+                    <button class="header__callback btn js-open-modal" data-modal="callback">Заказать звонок</button>
+                    <div class="header__menu-btn">
+                        <img src="assets/img/general/menu-icon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header-->
+        <div class="header-menu">
+            <div class="header-menu__container container">
+                <div class="header-menu__close"></div>
+                <ul class="header-menu__list">
+                    <li class="header-menu__item"> <a class="header-menu__link" href="#">Выбор автобусов</a>
+                    </li>
+                    <li class="header-menu__item"> <a class="header-menu__link" href="#">Заказать автобус</a>
+                    </li>
+                    <li class="header-menu__item"> <a class="header-menu__link" href="#">Для каких задач</a>
+                    </li>
+                    <li class="header-menu__item"> <a class="header-menu__link" href="#">Лицензия на перевозку</a>
+                    </li>
+                    <li class="header-menu__item"> <a class="header-menu__link" href="#">Благодарственные письма</a>
+                    </li>
+                    <li class="header-menu__item"> <a class="header-menu__link" href="#">Частые вопросы</a>
+                    </li>
+                    <li class="header-menu__item"> <a class="header-menu__link" href="#">Связаться с нами</a>
+                    </li>
+                </ul>
+                <div class="header-menu__actions"> <a class="header-menu__phone" href="tel:+79004597887">+7 900 459 78 87</a>
+                    <button class="btn is-orange header-menu__button js-open-modal" data-modal="callback">Заказать звонок</button>
+                </div>
+            </div>
+        </div>
+        <!-- promo-->
+        <div class="promo" style="background: url('assets/img/general/promo.jpg') no-repeat; background-size: cover;">
+            <div class="promo__container container">
+                <h1 class="promo__title">Аренда автобусов с водителем</h1>
+                <div class="promo__caption">В Архангельске и по России</div>
+                <button class="btn is-orange promo__button js-open-modal" data-modal="bus">Заказать автобус</button>
+            </div>
+        </div>
+        <!-- end promo-->
+        <!-- page-slider-->
+        <section class="page-slider splide">
+            <div class="page-slider__track splide__track">
+                <div class="page-slider__list splide__list">
+                    <div class="page-slider__item splide__slide"><a href="#">Более 10 лет опыта водителей</a>
+                    </div>
+                    <div class="page-slider__item splide__slide"><a href="#">Комфортные автобусы</a>
+                    </div>
+                    <div class="page-slider__item splide__slide"><a href="#">Страхование пассажиров</a>
+                    </div>
+                    <div class="page-slider__item splide__slide"><a href="#">Заблаговременная подача автобуса</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end page-slider-->
+        <!-- section-->
+        <section class="informer section">
+            <div class="informer__container container">
+                <h2 class="informer__text">Пассажирские перевозки для <a href="#">всех задач</a>, на автобусах <a href="#">нужной вместимости</a> с высоким <a href="#">уровнем сервиса</a></h2>
+            </div>
+        </section>
+        <!-- end section-->
+        <!-- section-->
+        <section class="section is-dark js-section-sorting js-gallery">
+            <div class="section__container container">
+                <div class="section__header">
+                    <h2 class="section__title is-center">Большой выбор автобусов</h2>
+                </div>
+                <div class="tab-nav filters-button-group button-group section__tab-nav">
+                    <button class="tab-nav__item is-active" data-filter="*">Все автобусы</button>
+                    <button class="tab-nav__item" data-filter=".item1">Микроавтобус 7-8 м.</button>
+                    <button class="tab-nav__item" data-filter=".item2">Микроавтобус 17-18 м.</button>
+                    <button class="tab-nav__item" data-filter=".item3">Автобус 25-35 м.</button>
+                    <button class="tab-nav__item" data-filter=".item4">Автобус 40-53 м.</button>
+                </div>
+                <div class="grid section__grid js-section-grid">
+                    <!-- col-->
+                    <div class="grid__col col-5 item1">
+                        <div class="catalog-card">
+                            <a class="catalog-card__photo" href="#">
+                                <img src="assets/img/general/pic.png" alt="">
+                            </a>
+                            <div class="catalog-card__data">
+                                <div class="catalog-card__title">Volkswagen T-57</div>
+                                <div class="catalog-card__fields">
+                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-5 item1">
+                        <div class="catalog-card">
+                            <a class="catalog-card__photo" href="#">
+                                <img src="assets/img/general/pic.png" alt="">
+                            </a>
+                            <div class="catalog-card__data">
+                                <div class="catalog-card__title">Volkswagen T-57</div>
+                                <div class="catalog-card__fields">
+                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-5 item1">
+                        <div class="catalog-card">
+                            <a class="catalog-card__photo" href="#">
+                                <img src="assets/img/general/pic.png" alt="">
+                            </a>
+                            <div class="catalog-card__data">
+                                <div class="catalog-card__title">Volkswagen T-57</div>
+                                <div class="catalog-card__fields">
+                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-5 item2">
+                        <div class="catalog-card">
+                            <a class="catalog-card__photo" href="#">
+                                <img src="assets/img/general/pic.png" alt="">
+                            </a>
+                            <div class="catalog-card__data">
+                                <div class="catalog-card__title">Volkswagen T-57</div>
+                                <div class="catalog-card__fields">
+                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-5 item2">
+                        <div class="catalog-card">
+                            <a class="catalog-card__photo" href="#">
+                                <img src="assets/img/general/pic.png" alt="">
+                            </a>
+                            <div class="catalog-card__data">
+                                <div class="catalog-card__title">Volkswagen T-57</div>
+                                <div class="catalog-card__fields">
+                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-5 item3">
+                        <div class="catalog-card">
+                            <a class="catalog-card__photo" href="#">
+                                <img src="assets/img/general/pic.png" alt="">
+                            </a>
+                            <div class="catalog-card__data">
+                                <div class="catalog-card__title">Volkswagen T-57</div>
+                                <div class="catalog-card__fields">
+                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-5 item4">
+                        <div class="catalog-card">
+                            <a class="catalog-card__photo" href="#">
+                                <img src="assets/img/general/pic.png" alt="">
+                            </a>
+                            <div class="catalog-card__data">
+                                <div class="catalog-card__title">Volkswagen T-57</div>
+                                <div class="catalog-card__fields">
+                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-5 item4">
+                        <div class="catalog-card">
+                            <a class="catalog-card__photo" href="#">
+                                <img src="assets/img/general/pic.png" alt="">
+                            </a>
+                            <div class="catalog-card__data">
+                                <div class="catalog-card__title">Volkswagen T-57</div>
+                                <div class="catalog-card__fields">
+                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-5 item1">
+                        <div class="catalog-card">
+                            <a class="catalog-card__photo" href="#">
+                                <img src="assets/img/general/pic.png" alt="">
+                            </a>
+                            <div class="catalog-card__data">
+                                <div class="catalog-card__title">Volkswagen T-57</div>
+                                <div class="catalog-card__fields">
+                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-5 item1">
+                        <div class="catalog-card">
+                            <a class="catalog-card__photo" href="#">
+                                <img src="assets/img/general/pic.png" alt="">
+                            </a>
+                            <div class="catalog-card__data">
+                                <div class="catalog-card__title">Volkswagen T-57</div>
+                                <div class="catalog-card__fields">
+                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-5 item1">
+                        <div class="catalog-card">
+                            <a class="catalog-card__photo" href="#">
+                                <img src="assets/img/general/pic.png" alt="">
+                            </a>
+                            <div class="catalog-card__data">
+                                <div class="catalog-card__title">Volkswagen T-57</div>
+                                <div class="catalog-card__fields">
+                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-5 item2">
+                        <div class="catalog-card">
+                            <a class="catalog-card__photo" href="#">
+                                <img src="assets/img/general/pic.png" alt="">
+                            </a>
+                            <div class="catalog-card__data">
+                                <div class="catalog-card__title">Volkswagen T-57</div>
+                                <div class="catalog-card__fields">
+                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-5 item2">
+                        <div class="catalog-card">
+                            <a class="catalog-card__photo" href="#">
+                                <img src="assets/img/general/pic.png" alt="">
+                            </a>
+                            <div class="catalog-card__data">
+                                <div class="catalog-card__title">Volkswagen T-57</div>
+                                <div class="catalog-card__fields">
+                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-5 item3">
+                        <div class="catalog-card">
+                            <a class="catalog-card__photo" href="#">
+                                <img src="assets/img/general/pic.png" alt="">
+                            </a>
+                            <div class="catalog-card__data">
+                                <div class="catalog-card__title">Volkswagen T-57</div>
+                                <div class="catalog-card__fields">
+                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-5 item4">
+                        <div class="catalog-card">
+                            <a class="catalog-card__photo" href="#">
+                                <img src="assets/img/general/pic.png" alt="">
+                            </a>
+                            <div class="catalog-card__data">
+                                <div class="catalog-card__title">Volkswagen T-57</div>
+                                <div class="catalog-card__fields">
+                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-5 item4">
+                        <div class="catalog-card">
+                            <a class="catalog-card__photo" href="#">
+                                <img src="assets/img/general/pic.png" alt="">
+                            </a>
+                            <div class="catalog-card__data">
+                                <div class="catalog-card__title">Volkswagen T-57</div>
+                                <div class="catalog-card__fields">
+                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    </div>
+                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                </div>
+                <div class="section__footer">
+                    <div class="section__load-more-cards btn is-orange is-outline">Показать все</div>
+                </div>
+            </div>
+        </section>
+        <!-- end section-->
+        <!-- section-->
+        <section class="order section">
+            <div class="order__container container">
+                <div class="order__data">
+                    <h2 class="order__title">Заказать автобус</h2>
+                    <div class="order__caption">Свяжитесьс нами, наши сотрудники примут вашу заявку, ответят на вопросы</div>
+                    <button class="btn is-orange order__button js-open-modal" data-modal="order">Оставить заявку</button>
+                    <div class="order__links"> <a class="order__phone" href="tel:+79006544782">+7 900 654 47 82</a>
+                        <ul>
+                            <li> <a href="#">Telegram</a>
+                            </li>
+                            <li> <a href="#">WhatsApp</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <img class="order__img" src="assets/img/general/bus.png" alt="">
+            </div>
+        </section>
+        <!-- end section-->
+        <!-- section-->
+        <section class="section">
+            <div class="section__container container">
+                <div class="section__header">
+                    <h2 class="section__title is-center">Аренда автобусов для любых задач</h2>
+                </div>
+                <div class="grid section__grid">
+                    <!-- col-->
+                    <div class="grid__col col-3">
+                        <div class="delivery-card">
+                            <div class="delivery-card__header">
+                                <div class="delivery-card__title">Детские перевозки</div>
+                                <div class="delivery-card__caption">Автобус для перевозки школьников с соблюдением всех требований</div>
+                            </div>
+                            <ul class="delivery-card__list">
+                                <li class="delivery-card__item">Согласование поездки с ГИБДД</li>
+                                <li class="delivery-card__item">Все неободимые документы</li>
+                                <li class="delivery-card__item">Наличие ремней
+                                    <br>безопасности</li>
+                            </ul>
+                            <button class="btn is-orange is-outline delivery-card__button js-open-modal" data-modal="bus">Заказать</button>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-3">
+                        <div class="delivery-card">
+                            <div class="delivery-card__header">
+                                <div class="delivery-card__title">Перевозка сотрудников</div>
+                                <div class="delivery-card__caption">Автобус для перевозки школьников с соблюдением всех требований</div>
+                            </div>
+                            <ul class="delivery-card__list">
+                                <li class="delivery-card__item">Согласование поездки с ГИБДД</li>
+                                <li class="delivery-card__item">Все неободимые документы</li>
+                                <li class="delivery-card__item">Наличие ремней
+                                    <br>безопасности</li>
+                            </ul>
+                            <button class="btn is-orange is-outline delivery-card__button js-open-modal" data-modal="bus">Заказать</button>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-3">
+                        <div class="delivery-card">
+                            <div class="delivery-card__header">
+                                <div class="delivery-card__title">Перевозка туристов</div>
+                                <div class="delivery-card__caption">Автобус для перевозки школьников с соблюдением всех требований</div>
+                            </div>
+                            <ul class="delivery-card__list">
+                                <li class="delivery-card__item">Согласование поездки с ГИБДД</li>
+                                <li class="delivery-card__item">Все неободимые документы</li>
+                                <li class="delivery-card__item">Наличие ремней
+                                    <br>безопасности</li>
+                            </ul>
+                            <button class="btn is-orange is-outline delivery-card__button js-open-modal" data-modal="bus">Заказать</button>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-3">
+                        <div class="delivery-card">
+                            <div class="delivery-card__header">
+                                <div class="delivery-card__title">Трансфер до аэропорта или ЖД</div>
+                                <div class="delivery-card__caption">Автобус для перевозки школьников с соблюдением всех требований</div>
+                            </div>
+                            <ul class="delivery-card__list">
+                                <li class="delivery-card__item">Согласование поездки с ГИБДД</li>
+                                <li class="delivery-card__item">Все неободимые документы</li>
+                                <li class="delivery-card__item">Наличие ремней
+                                    <br>безопасности</li>
+                            </ul>
+                            <button class="btn is-orange is-outline delivery-card__button js-open-modal" data-modal="bus">Заказать</button>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-3">
+                        <div class="delivery-card">
+                            <div class="delivery-card__header">
+                                <div class="delivery-card__title">Торжественние
+                                    <br>мероприятия</div>
+                                <div class="delivery-card__caption">Автобус для перевозки школьников с соблюдением всех требований</div>
+                            </div>
+                            <ul class="delivery-card__list">
+                                <li class="delivery-card__item">Согласование поездки с ГИБДД</li>
+                                <li class="delivery-card__item">Все неободимые документы</li>
+                                <li class="delivery-card__item">Наличие ремней
+                                    <br>безопасности</li>
+                            </ul>
+                            <button class="btn is-orange is-outline delivery-card__button js-open-modal" data-modal="bus">Заказать</button>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                    <!-- col-->
+                    <div class="grid__col col-3">
+                        <div class="delivery-card">
+                            <div class="delivery-card__header">
+                                <div class="delivery-card__title">Междугородние
+                                    <br>перевозки по России</div>
+                                <div class="delivery-card__caption">Автобус для перевозки школьников с соблюдением всех требований</div>
+                            </div>
+                            <ul class="delivery-card__list">
+                                <li class="delivery-card__item">Согласование поездки с ГИБДД</li>
+                                <li class="delivery-card__item">Все неободимые документы</li>
+                                <li class="delivery-card__item">Наличие ремней
+                                    <br>безопасности</li>
+                            </ul>
+                            <button class="btn is-orange is-outline delivery-card__button js-open-modal" data-modal="bus">Заказать</button>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                </div>
+            </div>
+        </section>
+        <!-- end section-->
+        <!-- section-->
+        <section class="license section is-dark js-gallery">
+            <div class="license__container container">
+                <div class="license__data">
+                    <h2 class="license__title">Действующая лицензия на перевозку пассажиров</h2>
+                    <div class="license__caption">Стратегия позиционирования обуславливает медиабизнес, осознавая социальную ответственность бизнеса.</div><a class="btn is-orange license__button" href="assets/img/general/license.png">Открыть лиценизию</a>
+                </div>
+                <a class="license__img" href="assets/img/general/license.png">
+                    <img src="assets/img/general/license.png" alt="">
+                </a>
+            </div>
+        </section>
+        <!-- end section-->
+        <!-- section-->
+        <section class="section js-gallery">
+            <div class="section__container container">
+                <div class="section__header">
+                    <h2 class="section__title is-center">Благодарственные письма</h2>
+                </div>
+                <section class="section__slider splide js-section-slider">
+                    <div class="section__slider-track splide__track">
+                        <div class="section__slider-list splide__list">
+                            <div class="section__slider-item splide__slide">
+                                <a class="preview-card" href="assets/img/general/pic.png">
+                                    <img src="assets/img/general/pic.png" alt="">
+                                </a>
+                            </div>
+                            <div class="section__slider-item splide__slide">
+                                <a class="preview-card" href="assets/img/general/pic.png">
+                                    <img src="assets/img/general/pic.png" alt="">
+                                </a>
+                            </div>
+                            <div class="section__slider-item splide__slide">
+                                <a class="preview-card" href="assets/img/general/pic.png">
+                                    <img src="assets/img/general/pic.png" alt="">
+                                </a>
+                            </div>
+                            <div class="section__slider-item splide__slide">
+                                <a class="preview-card" href="assets/img/general/pic.png">
+                                    <img src="assets/img/general/pic.png" alt="">
+                                </a>
+                            </div>
+                            <div class="section__slider-item splide__slide">
+                                <a class="preview-card" href="assets/img/general/pic.png">
+                                    <img src="assets/img/general/pic.png" alt="">
+                                </a>
+                            </div>
+                            <div class="section__slider-item splide__slide">
+                                <a class="preview-card" href="assets/img/general/pic.png">
+                                    <img src="assets/img/general/pic.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <!-- end section-->
+        <!-- section-->
+        <section class="advants section is-blue">
+            <div class="advants__container container">
+                <div class="advants__grid">
+                    <div class="advants__col">
+                        <div class="advants-card">
+                            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_77_241)">
+                                    <path d="M71.9296 26.4821C71.9296 26.9562 71.9296 27.4128 71.9296 27.887C71.6135 29.9065 70.3843 31.364 68.9794 32.7513C64.396 37.2821 59.8653 41.8655 55.2994 46.4138C54.9657 46.7474 54.8077 47.0811 54.8077 47.5728C54.8252 53.4909 54.8253 59.3913 54.8253 65.3094C54.8253 67.5221 54.0701 69.4187 52.2087 70.6655C51.3306 71.2626 50.2243 71.5084 49.2233 71.9299C34.7355 71.9299 20.2477 71.9299 5.75989 71.9299C5.09257 71.7191 4.39013 71.5962 3.7755 71.2977C1.26428 70.0509 0.140373 67.926 0.140373 65.1689C0.140373 51.524 0.140373 37.8792 0.140373 24.2343C0.140373 18.3865 0.122812 12.5562 0.140373 6.70842C0.157934 2.91525 2.8272 0.158173 6.58525 0.140612C18.5267 0.123051 30.4682 0.123051 42.3921 0.140612C44.0077 0.140612 45.5004 0.597199 46.677 1.73866C48.6613 3.65281 50.5931 5.61964 52.5599 7.53378C54.0877 9.00891 54.8077 10.7826 54.8077 12.925C54.7726 18.0177 54.7901 23.1104 54.7901 28.2031C54.7901 28.4313 54.7901 28.6772 54.7901 28.9055C54.8604 28.9231 54.9131 28.9406 54.9833 28.9582C55.1413 28.7826 55.2818 28.5894 55.4399 28.4313C57.2838 26.5699 59.1101 24.7084 60.9892 22.8821C63.957 19.9845 68.2594 20.2479 70.6828 23.567C71.315 24.3923 71.5257 25.4987 71.9296 26.4821ZM38.0018 4.35525C37.7911 4.33769 37.6682 4.33769 37.5628 4.33769C27.2545 4.33769 16.9638 4.33769 6.6555 4.33769C5.16281 4.33769 4.35501 5.21574 4.35501 6.79623C4.35501 26.2889 4.35501 45.764 4.35501 65.2567C4.35501 66.9074 5.16282 67.7152 6.79599 67.7152C20.5814 67.7152 34.3667 67.7152 48.1521 67.7152C49.8379 67.7152 50.6282 66.9074 50.6282 65.204C50.6282 60.7611 50.6282 56.3182 50.6282 51.8928C50.6282 51.6996 50.6282 51.4889 50.6282 51.2957C50.1189 51.5591 49.6799 51.8226 49.2057 51.9982C46.4662 52.9289 43.7092 53.8245 40.9872 54.7552C40.074 55.0713 39.2311 55.0538 38.5111 54.3513C37.7735 53.6313 37.7735 52.7533 38.0896 51.8226C39.0028 49.1709 39.8282 46.5016 40.7765 43.8674C41.0223 43.2001 41.4262 42.5152 41.9355 42.006C44.6399 39.2313 47.397 36.4918 50.154 33.7699C50.4877 33.4362 50.6457 33.1026 50.6457 32.6109C50.6282 27.6411 50.6282 22.6538 50.6282 17.684C50.6282 17.4557 50.6106 17.2274 50.5931 16.964C50.2945 16.964 50.0487 16.964 49.7853 16.964C46.6243 16.964 43.4809 16.964 40.3199 16.964C38.8623 16.964 38.0194 16.1035 38.0018 14.6635C37.9843 12.6616 38.0018 10.6421 38.0018 8.64013C38.0018 7.21769 38.0018 5.81281 38.0018 4.35525ZM59.0574 31.0831C55.7384 34.3845 52.3843 37.7387 49.0828 41.0226C49.9784 41.9182 50.9267 42.8665 51.8399 43.7796C55.1589 40.4782 58.4955 37.1416 61.8145 33.8401C60.8838 32.8918 59.9179 31.926 59.0574 31.0831ZM42.234 12.6967C45.0614 12.6967 47.836 12.6967 50.5931 12.6967C50.6809 11.9591 50.4526 11.3621 49.9784 10.8704C48.0291 8.90354 46.0623 6.93671 44.0955 4.98744C43.6038 4.49574 42.9892 4.23232 42.2516 4.37281C42.234 7.165 42.234 9.90451 42.234 12.6967ZM64.9579 30.6616C65.6779 29.9767 66.5033 29.2743 67.2233 28.484C67.9609 27.6587 67.8731 26.4645 67.1004 25.6918C66.3628 24.9543 65.1687 24.8138 64.3784 25.5162C63.5531 26.2538 62.8331 27.1143 62.1482 27.8343C63.0789 28.7826 64.0448 29.7484 64.9579 30.6616ZM45.8867 44.0255C45.0438 44.5874 44.6048 45.3601 44.3414 46.2909C44.0428 47.3445 43.6565 48.3806 43.3228 49.4167C45.2018 48.5738 47.5023 48.767 48.8018 46.9406C47.8009 45.9572 46.8526 44.9913 45.8867 44.0255Z"
+                                    fill="white" />
+                                    <path d="M25.3754 21.1611C30.2047 21.1611 35.0515 21.1611 39.8808 21.1611C41.5491 21.1611 42.6203 22.566 42.0408 24.006C41.7247 24.8138 41.0925 25.2528 40.232 25.3406C40.0037 25.3582 39.7578 25.3582 39.5295 25.3582C30.0817 25.3582 20.6515 25.3582 11.2037 25.3582C9.51784 25.3582 8.53442 24.5855 8.53442 23.2509C8.53442 21.9162 9.51784 21.1436 11.1861 21.1436C15.9452 21.1611 20.6515 21.1611 25.3754 21.1611Z"
+                                    fill="white" />
+                                    <path d="M21.1258 33.7874C17.7189 33.7874 14.2945 33.7874 10.8877 33.7874C10.0272 33.7874 9.32479 33.5064 8.86821 32.7688C8.02528 31.4167 8.95601 29.6957 10.5716 29.5903C11.1511 29.5552 11.7482 29.5727 12.3277 29.5727C18.5619 29.5727 24.8136 29.5727 31.0477 29.5727C31.276 29.5727 31.5219 29.5727 31.7502 29.5727C32.9092 29.643 33.7872 30.521 33.8048 31.6449C33.8224 32.804 32.9267 33.7347 31.7326 33.7523C29.6604 33.7874 27.5706 33.7698 25.4985 33.7698C24.0233 33.7874 22.5658 33.7874 21.1258 33.7874Z"
+                                    fill="white" />
+                                    <path d="M21.1783 37.9844C24.6378 37.9844 28.0974 37.9668 31.5569 37.9844C33.1725 37.9844 34.2086 39.4068 33.6466 40.8292C33.3305 41.6546 32.593 42.1639 31.6271 42.1814C30.2222 42.199 28.8174 42.1814 27.4125 42.1814C21.8983 42.1814 16.3842 42.1814 10.87 42.1814C9.20174 42.1814 8.14808 40.7766 8.69247 39.3366C9.02613 38.4761 9.78125 37.9844 10.8525 37.9844C14.2944 37.9844 17.7364 37.9844 21.1783 37.9844Z"
+                                    fill="white" />
+                                    <path d="M21.1783 46.4136C24.6378 46.4136 28.0974 46.396 31.5569 46.4136C33.2076 46.4136 34.2437 47.9063 33.6291 49.3287C33.2603 50.1892 32.5578 50.6106 31.6271 50.6106C30.2749 50.6282 28.9227 50.6106 27.553 50.6106C21.9861 50.6106 16.4369 50.6106 10.87 50.6106C9.20174 50.6106 8.14808 49.2058 8.69247 47.7658C9.02613 46.9053 9.78125 46.4136 10.8525 46.4136C14.2944 46.396 17.7364 46.4136 21.1783 46.4136Z"
+                                    fill="white" />
+                                    <path d="M33.717 63.5183C31.7326 63.5183 29.7482 63.5183 27.7638 63.5183C26.3414 63.5183 25.3931 62.6579 25.3931 61.411C25.3931 60.1642 26.3414 59.3213 27.7814 59.3037C31.8028 59.3037 35.8243 59.3037 39.8458 59.3037C41.2682 59.3037 42.2165 60.1642 42.2165 61.411C42.2165 62.6579 41.2682 63.5008 39.8282 63.5183C37.7911 63.5183 35.754 63.5183 33.717 63.5183Z"
+                                    fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_77_241">
+                                        <rect width="72" height="72" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="advants-card__text">Работаем по договору на юридическое лицо</div>
+                        </div>
+                    </div>
+                    <div class="advants__col">
+                        <div class="advants-card">
+                            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M72 41.1188C72 41.7751 72 42.4313 72 43.0876C71.9625 43.2001 71.8875 43.2938 71.8687 43.4063C71.1749 46.7063 69.1874 48.7876 65.9249 49.6126C64.8562 49.8751 63.7687 50.0626 62.6812 50.1938C62.0999 50.2688 62.0249 50.5126 62.0249 51.0001C62.0437 54.1313 62.0437 57.2626 62.0249 60.4126C62.0249 61.1626 61.9687 61.9126 61.7812 62.6251C60.8812 66.2063 57.825 68.4751 53.9437 68.4938C40.4437 68.4938 26.9437 68.4938 13.4437 68.4938C11.55 68.4938 9.6562 68.5313 7.76245 68.4751C3.4687 68.3813 0.112451 65.0251 0.112451 60.7501C0.0937012 50.4938 0.0937012 40.2563 0.112451 30.0001C0.112451 27.4501 1.12495 25.2376 3.2812 23.9251C4.64995 23.0813 4.7062 22.2751 4.42495 20.9251C3.5437 16.5938 6.22495 12.6376 10.5375 11.7938C14.1562 11.0813 17.7937 10.4813 21.4312 9.84384C33.3187 7.74384 45.2249 5.66259 57.1124 3.54384C61.5937 2.75634 65.5312 5.32509 66.3562 9.80634C67.8937 18.1876 69.3374 26.6063 70.8374 35.0063C71.2312 37.0313 71.625 39.0751 72 41.1188ZM4.34995 45.7501C4.34995 46.0501 4.34995 46.2751 4.34995 46.5001C4.34995 51.1126 4.34995 55.7251 4.34995 60.3188C4.34995 62.8126 5.77495 64.2563 8.24995 64.2563C23.4749 64.2563 38.7 64.2563 53.9437 64.2563C56.4 64.2563 57.8437 62.8126 57.8437 60.3938C57.8437 55.7626 57.8437 51.1313 57.8437 46.5001C57.8437 46.2563 57.8437 46.0126 57.8437 45.7501C39.9562 45.7501 22.2187 45.7501 4.34995 45.7501ZM8.9437 22.3313C9.3562 22.3313 9.6562 22.3313 9.9562 22.3313C24.5625 22.3313 39.15 22.3313 53.7562 22.3313C54.5062 22.3313 55.2562 22.3688 55.9874 22.5376C59.6062 23.3438 62.025 26.3626 62.0625 30.1126C62.1 35.1188 62.0625 40.1251 62.0625 45.1313C62.0625 45.4126 62.0625 45.6751 62.0625 46.0126C63.1687 45.8063 64.1812 45.6751 65.1749 45.4313C66.9187 45.0001 68.0437 43.2376 67.725 41.4563C66.375 33.7876 65.0249 26.1188 63.6749 18.4688C63.2249 15.9001 62.7562 13.3126 62.3062 10.7438C61.9312 8.55009 60.2437 7.31259 58.0687 7.68759C54.4687 8.30634 50.8875 8.92509 47.2875 9.56259C35.3625 11.6626 23.4562 13.7626 11.5312 15.8626C9.6562 16.2001 8.39995 17.6626 8.4937 19.4813C8.5687 20.4188 8.7937 21.3376 8.9437 22.3313ZM4.38745 41.4563C22.2374 41.4563 40.0125 41.4563 57.8062 41.4563C57.8062 39.6751 57.8062 37.9501 57.8062 36.1876C39.9937 36.1876 22.1999 36.1876 4.38745 36.1876C4.38745 37.9688 4.38745 39.6751 4.38745 41.4563ZM57.825 31.8751C57.825 31.2001 57.8437 30.5813 57.825 29.9626C57.7875 28.5188 56.8687 27.2438 55.4812 26.7938C54.9562 26.6251 54.3749 26.5688 53.8312 26.5688C38.6812 26.5501 23.5312 26.5501 8.3812 26.5688C8.0812 26.5688 7.76245 26.5688 7.4812 26.6251C5.88745 26.8501 4.7062 27.9188 4.46245 29.4938C4.34995 30.2626 4.4437 31.0688 4.4437 31.8938C22.1812 31.8751 39.9562 31.8751 57.825 31.8751Z"
+                                fill="white" />
+                                <path d="M15.5999 59.9814C14.0999 59.9814 12.5998 59.9814 11.1186 59.9814C9.6936 59.9627 8.7561 59.1002 8.7561 57.8627C8.77485 56.6064 9.71235 55.7627 11.1561 55.7627C14.1749 55.7627 17.1936 55.7627 20.1936 55.7627C21.5999 55.7627 22.5748 56.6627 22.5561 57.9002C22.5373 59.1189 21.5998 59.9814 20.2311 59.9814C18.6936 60.0002 17.1561 59.9814 15.5999 59.9814Z"
+                                fill="white" />
+                            </svg>
+                            <div class="advants-card__text">Оплата любым удобным вам способом</div>
+                        </div>
+                    </div>
+                    <div class="advants__col">
+                        <div class="advants-card">
+                            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_77_265)">
+                                    <path d="M66.1079 71.9998C46.0407 71.9998 25.9735 71.9998 5.90634 71.9998C4.6829 71.4373 4.30321 70.467 4.3454 69.1592C4.41571 66.6279 4.37352 64.0967 4.35946 61.5654C4.35946 59.8639 4.58446 58.2045 5.14696 56.6014C7.35477 50.3998 12.7688 46.5748 19.3642 46.5467C21.361 46.5326 23.3438 46.5326 25.3407 46.5607C25.7626 46.5607 25.9595 46.4623 26.0579 46.0123C26.2266 45.1686 26.4517 44.3248 26.6767 43.4951C26.7892 43.0732 26.7329 42.8201 26.3532 42.5529C24.6798 41.442 23.2876 40.0357 22.0923 38.4045C21.9235 38.1795 21.5438 37.9826 21.2485 37.9826C19.7017 37.9404 18.1548 37.9967 16.6079 37.9404C12.6985 37.7998 9.21103 34.7342 8.74696 30.8811C8.52196 29.0107 8.57821 27.0982 8.60634 25.1998C8.64853 21.3045 11.2782 18.0279 15.0751 17.1139C15.8626 16.9311 16.6782 16.8748 17.5782 16.7482C17.5782 15.5248 17.4376 14.2732 17.6063 13.0498C18.3657 7.32636 21.4454 3.30449 26.761 1.06856C28.0407 0.53418 29.447 0.337305 30.797 -0.0283203C34.2704 -0.0283203 37.7298 -0.0283203 41.2032 -0.0283203C41.4001 0.0279297 41.597 0.0841797 41.8079 0.112305C44.7891 0.548242 47.4188 1.72949 49.6407 3.75449C53.086 6.89043 54.647 10.842 54.5485 15.4826C54.5345 15.9186 54.5485 16.3545 54.5485 16.8607C54.8298 16.8607 55.0548 16.8607 55.2938 16.8607C59.3298 17.0014 62.8032 19.9967 63.2813 24.0186C63.5204 26.0717 63.5204 28.1951 63.3798 30.2623C63.0985 34.1717 60.1313 37.3217 56.2501 37.7998C54.4501 38.0248 52.6079 37.8982 50.7798 37.9686C50.4985 37.9826 50.1329 38.1373 49.9782 38.3482C48.7829 39.9936 47.3766 41.4139 45.6751 42.5529C45.2954 42.8061 45.2251 43.0732 45.3516 43.4951C45.5626 44.2404 45.7595 44.9857 45.9001 45.7451C46.0126 46.3498 46.2376 46.5748 46.8985 46.5607C48.797 46.5045 50.6954 46.5045 52.5938 46.5607C53.7329 46.5889 54.9001 46.6451 56.011 46.8982C62.986 48.5014 67.6266 54.3373 67.6548 61.4951C67.6688 64.0545 67.6126 66.5998 67.6829 69.1592C67.697 70.467 67.3173 71.4373 66.1079 71.9998ZM8.70477 67.7248C26.9016 67.7248 45.1407 67.7248 63.3938 67.7248C63.3938 65.292 63.4923 62.8873 63.3657 60.5107C63.1266 56.1373 59.8782 52.2982 55.6735 51.1451C53.8735 50.6529 52.0454 50.8217 50.2313 50.7514C49.5985 50.7232 49.247 50.9201 48.9376 51.4967C45.9985 57.0373 39.572 60.117 33.4126 58.9498C28.7017 58.0498 25.2001 55.4764 22.922 51.2576C22.7251 50.9061 22.5423 50.7373 22.1204 50.7514C20.9251 50.7936 19.7298 50.7373 18.5345 50.7795C13.6407 50.9764 9.23915 54.8857 8.74696 59.7514C8.49384 62.367 8.70477 65.0389 8.70477 67.7248ZM21.9517 21.0936C21.9376 21.2764 21.9095 21.3889 21.9235 21.4873C22.1204 22.8514 22.2892 24.2154 22.5142 25.5795C22.8798 27.7311 23.1048 29.9107 23.6813 31.992C25.7063 39.3467 33.6376 43.2279 40.7532 40.4436C42.1595 39.8951 43.4673 39.1357 44.6907 37.9686C44.297 37.9686 44.0579 37.9686 43.8329 37.9686C41.2735 37.9686 38.7282 37.9686 36.1688 37.9686C35.2126 37.9686 34.4813 37.5748 34.0876 36.6889C33.4407 35.2686 34.4954 33.7639 36.1407 33.7498C39.4735 33.7357 42.7923 33.7498 46.1251 33.7498C47.9813 33.7498 48.0235 33.7639 48.4032 31.8795C48.8673 29.517 49.261 27.1404 49.6688 24.7639C49.8798 23.5686 50.0345 22.3732 50.2313 21.0936C49.8376 21.0936 49.6126 21.0936 49.3876 21.0936C47.7704 21.0936 46.1532 21.1076 44.536 21.0936C42.4688 21.0795 40.7673 20.2639 39.4735 18.6467C39.3892 18.5482 39.2766 18.4639 39.1782 18.3654C39.0235 18.4498 38.897 18.5201 38.7845 18.5904C36.647 19.9264 34.3267 20.8264 31.8095 20.9529C28.9829 21.0936 26.1423 21.0514 23.3157 21.0936C22.8516 21.0936 22.4157 21.0936 21.9517 21.0936ZM50.3298 16.8607C50.3298 16.0873 50.3438 15.342 50.3298 14.5967C50.2454 9.04199 45.7735 4.41543 40.2329 4.26074C37.4204 4.17636 34.6079 4.1623 31.7954 4.26074C25.7204 4.47168 20.7423 9.85762 21.811 16.8889C22.0501 16.8889 22.3032 16.8889 22.5563 16.8889C24.8766 16.8889 27.197 16.8748 29.5173 16.8889C32.9766 16.9311 36.0001 15.8482 38.5313 13.4576C39.2204 12.7967 40.0079 12.4451 40.9641 12.8248C41.8923 13.1904 42.2579 13.9498 42.3423 14.9201C42.4266 15.9748 43.1579 16.8186 44.1563 16.8467C46.1813 16.9029 48.1923 16.8607 50.3298 16.8607ZM27.647 50.7795C32.0063 56.6857 40.7532 56.0107 44.311 50.7654C43.0454 50.5826 42.497 49.7529 42.2438 48.5998C41.9626 47.3201 41.6251 46.0686 41.3438 44.9436C39.5157 45.1545 37.7579 45.5201 36.0001 45.5201C34.2282 45.5201 32.4563 45.1545 30.6423 44.9436C30.3751 46.0123 30.0657 47.1936 29.8126 48.3748C29.5595 49.5982 29.0813 50.5967 27.647 50.7795ZM19.5891 33.7076C18.886 29.4889 18.197 25.3123 17.4938 21.1217C15.0329 20.8686 12.9235 22.6123 12.811 25.1436C12.7407 26.6623 12.7407 28.1951 12.811 29.7139C12.9095 31.8373 14.4563 33.4826 16.5657 33.6936C17.5923 33.792 18.6188 33.7076 19.5891 33.7076ZM52.4251 33.7217C53.3673 33.7217 54.3517 33.792 55.322 33.7076C57.4313 33.5389 59.0485 31.9498 59.161 29.8264C59.2595 28.2232 59.2595 26.592 59.161 24.9889C58.9923 22.5279 56.7563 20.7701 54.5204 21.1498C53.8313 25.3545 53.1282 29.517 52.4251 33.7217Z"
+                                    fill="white" />
+                                    <path d="M50.7938 63.4216C50.0906 63.4216 49.3875 63.4356 48.6844 63.4216C47.475 63.3794 46.575 62.4935 46.561 61.3403C46.5469 60.1591 47.461 59.231 48.7125 59.2169C50.0906 59.1888 51.4828 59.1888 52.861 59.2169C54.0703 59.245 54.9703 60.145 54.9844 61.2982C54.9985 62.4794 54.0844 63.3935 52.8328 63.4216C52.1578 63.4356 51.4828 63.4216 50.7938 63.4216Z"
+                                    fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_77_265">
+                                        <rect width="72" height="72" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="advants-card__text">Перснальный менеджер согласует все нюансы</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section-->
+        <!-- section-->
+        <section class="section is-dark">
+            <div class="section__container container">
+                <div class="section__header">
+                    <h2 class="section__title is-center">Часто задаваемые вопросы</h2>
+                </div>
+                <div class="section__list">
+                    <div class="section__list-col">
+                        <li class="section__item"> <span class="section__heading">Как заказать поездку</span><span class="section__text">Позиционирование на рынке масштабирует коллективный креатив. Искусство медиапланирования неестественно стабилизирует рекламный макет, осознав маркетинг как часть производства. Оценка эффективности кампании непосредственно восстанавливает диктат потребителя.</span>
+                        </li>
+                        <li class="section__item"><span class="section__heading">Как оплатить</span><span class="section__text">Потребительская культура стремительно притягивает медиавес, оптимизируя бюджеты. Стратегический рыночный план концентрирует рейтинг. Опросная анкета искажает фирменный план размещения.</span>
+                        </li>
+                        <li class="section__item"><span class="section__heading">Есть ли лицензии</span><span class="section__text">Эпсилон окрестность привлекает многочлен. Асимптота специфицирует отрицательный интеграл от функции комплексной переменной. Подынтегральное выражение проецирует разрыв функции. Интеграл по ориентированной области, следовательно, нетривиален.</span>
+                        </li>
+                    </div>
+                    <div class="section__list-col">
+                        <li class="section__item"> <span class="section__heading">Сколько автобусов имеется</span><span class="section__text">Акцепт опровергает диспозитивный причиненный ущерб. Франшиза, в первом приближении, своевременно исполняет дебиторский страховой полис. Поручительство опровергает правомерный предпринимательский риск.</span>
+                        </li>
+                        <li class="section__item"> <span class="section__heading">Заключаем ли договор</span><span class="section__text">Судебное решение обязывает виновный причиненный ущерб. Доверенность, как следует из теоретических исследований, опровергает сервитут. Франшиза, несмотря на некоторую вероятность дефолта, неравноправно запрещает договор, когда речь идет об ответственности юридического лица.</span>
+                        </li>
+                        <li class="section__item"> <span class="section__heading">Сколько идут поездки</span><span class="section__text">Бурное развитие внутреннего туризма привело Томаса Кука к необходимости организовать поездки за границу, при этом органический мир прочно поднимает растительный покров.</span>
+                        </li>
+                    </div>
+                </div>
+                <button class="btn is-orange is-outline section__show-more">Показать все</button>
+            </div>
+        </section>
+        <!-- end section-->
+        <!-- section-->
+        <section class="feedback section">
+            <div class="feedback__container container">
+                <div class="feedback__data">
+                    <div class="feedback__header">
+                        <h2 class="feedback__title">Связаться с нами</h2>
+                        <div class="feedback__caption">Остались вопросы? Свяжитесьс нами удобным Вам способом, наши сотрудники ответят на все вопросы</div>
+                    </div>
+                    <div class="feedback__buttons">
+                        <a class="feedback__social" href="#">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29676 13.6968C11.3365 11.0507 15.364 9.30625 17.3792 8.46342C23.1328 6.05698 24.3284 5.63895 25.1077 5.62515C25.279 5.62211 25.6623 5.66482 25.9105 5.86736C26.1201 6.03838 26.1778 6.26941 26.2054 6.43156C26.233 6.5937 26.2673 6.96308 26.24 7.25169C25.9282 10.5459 24.5791 18.5402 23.8927 22.2298C23.6023 23.791 23.0304 24.3145 22.4768 24.3657C21.2737 24.477 20.3601 23.5662 19.1948 22.7981C17.3713 21.5961 16.3411 20.8479 14.5711 19.675C12.5256 18.3195 13.8516 17.5745 15.0174 16.357C15.3225 16.0384 20.6236 11.1899 20.7262 10.75C20.739 10.695 20.7509 10.49 20.6298 10.3817C20.5086 10.2734 20.3298 10.3104 20.2008 10.3399C20.0179 10.3816 17.1049 12.3177 11.4617 16.1482C10.6349 16.7191 9.88593 16.9973 9.21491 16.9827C8.47516 16.9666 7.05219 16.5621 5.99435 16.2163C4.69687 15.7922 3.66566 15.568 3.75545 14.8478C3.80222 14.4726 4.31599 14.0889 5.29676 13.6968Z"
+                                fill="#121212" />
+                            </svg><span>Свзяться в WhatsApp</span>
+                        </a>
+                        <a class="feedback__social" href="#">
+                            <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.5147 2.5C8.63215 2.5 3.02936 8.09797 3.02686 14.9805C3.02561 17.1805 3.60184 19.3282 4.69434 21.2207L3 27.5L9.54053 25.9546C11.3643 26.9496 13.4173 27.4719 15.5073 27.4732H15.5122C22.3935 27.4732 27.9938 21.8739 27.9976 14.9927C28.0001 11.6564 26.7027 8.51967 24.3452 6.15967C21.9877 3.80092 18.8547 2.50125 15.5147 2.5ZM15.5122 5C18.1822 5.00125 20.6914 6.04225 22.5776 7.92725C24.4639 9.81475 25.5001 12.3227 25.4976 14.9902C25.4951 20.4952 21.0173 24.9732 15.5098 24.9732C13.8435 24.9719 12.193 24.5535 10.7393 23.7598L9.89698 23.3008L8.9668 23.5205L6.50586 24.1016L7.10645 21.8701L7.37744 20.8691L6.85986 19.9707C5.98736 18.4607 5.52561 16.7342 5.52686 14.9805C5.52936 9.47797 10.0085 5 15.5122 5ZM11.0957 9.21875C10.887 9.21875 10.5494 9.29688 10.2632 9.60938C9.97694 9.92063 9.16944 10.6745 9.16944 12.2095C9.16944 13.7445 10.2876 15.2283 10.4439 15.437C10.5989 15.6445 12.6022 18.894 15.7734 20.1441C18.4084 21.1828 18.9436 20.9778 19.5161 20.9253C20.0886 20.8741 21.3631 20.1721 21.6231 19.4434C21.8831 18.7146 21.8837 18.0877 21.8062 17.959C21.7287 17.829 21.5205 17.7515 21.208 17.5952C20.8968 17.439 19.3629 16.6858 19.0767 16.582C18.7904 16.4783 18.581 16.4258 18.3735 16.7383C18.166 17.0508 17.5697 17.7515 17.3872 17.959C17.2047 18.1677 17.0234 18.1958 16.7109 18.0396C16.3984 17.8821 15.3937 17.5518 14.2012 16.4893C13.2737 15.663 12.6478 14.6436 12.4653 14.3311C12.2841 14.0198 12.4482 13.8489 12.6045 13.6939C12.7445 13.5539 12.9146 13.3295 13.0708 13.147C13.2258 12.9645 13.2796 12.8345 13.3833 12.627C13.4871 12.4195 13.4339 12.2363 13.3564 12.0801C13.2789 11.9238 12.672 10.3831 12.3945 9.76563C12.1608 9.24688 11.9139 9.23483 11.6914 9.22608C11.5102 9.21858 11.3032 9.21875 11.0957 9.21875Z"
+                                fill="#121212" />
+                            </svg><span>Свзяться в Telegram</span>
+                        </a>
+                    </div>
+                    <ul class="feedback__list">
+                        <li class="feedback__item">
+                            <a class="feedback__link" href="tel:+79006544857">
+                                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M30.4738 1.00032L37.8422 3.10558C39.8596 3.16366 41.0001 4.60148 41.0001 6.26348C41.0001 25.5124 25.4001 41.0081 6.26326 41.0003C4.59746 41.0003 3.16011 39.8594 3.10537 37.8424L1.00011 30.474C0.707225 29.1773 1.57433 27.4582 3.10537 26.2635L11.5264 23.1056C12.5576 22.754 14.2762 23.176 15.7369 24.1582L17.8422 27.3161C21.9239 25.3015 25.2985 21.9257 27.3159 17.8424L24.158 15.7372C23.1816 14.2755 22.7597 12.5564 23.1054 11.5266L26.2633 3.10558C27.4624 1.57736 29.181 0.702167 30.4738 1.00032ZM5.2108 30.4744L7.31606 37.8428C23.9371 37.7643 37.7639 23.9375 37.8424 7.31652L30.474 5.21126L27.3161 12.5797L32.5792 16.7902C29.1192 25.0682 25.052 29.1196 16.7897 32.5797L12.5792 27.3165L5.2108 30.4744Z"
+                                    fill="#3651F8" />
+                                </svg><span>+7 900 654 4857</span>
+                            </a>
+                        </li>
+                        <li class="feedback__item">
+                            <a class="feedback__link" href="mailto:hello@arhtransfer.ru">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M35.7895 5.2627H4.21053C1.67891 5.2627 0 6.97106 0 9.47322V31.5785C0 34.0807 1.67891 35.789 4.21053 35.789H35.7895C38.3211 35.789 40 34.0807 40 31.5785V9.47322C40 6.97106 38.3211 5.2627 35.7895 5.2627ZM36.842 9.47363V12.6315L36.5277 12.8773C34.7501 14.2667 31.9362 16.4663 26.3157 21.0526C25.8584 21.304 25.2564 21.7499 24.6098 22.2289L24.6098 22.2289C23.3448 23.1658 21.9091 24.2292 21.0526 24.2105C19.3189 24.2316 17.4374 22.9036 16.0279 21.9088C15.5293 21.5569 15.0898 21.2467 14.7368 21.0526C9.12092 16.4699 6.30638 14.2699 4.52836 12.8801L4.52832 12.88L4.21045 12.6315V9.47363H36.842ZM4.21053 16.8416V31.5785H36.8421V16.8416C35.0446 18.2909 32.495 20.325 28.4211 23.1574C26.8415 24.8136 23.8771 27.7855 21.0526 27.368C17.159 27.7855 14.1565 24.7698 12.6316 23.1574C8.55688 20.3243 6.00793 18.2908 4.21053 16.8416Z"
+                                    fill="#3651F8" />
+                                </svg><span>hello@arhtransfer.ru</span>
+                            </a>
+                        </li>
+                        <li class="feedback__item">
+                            <div class="feedback__link">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.95161 0 0 8.95161 0 20C0 31.0484 8.95161 40 20 40C31.0484 40 40 31.0484 40 20C40 8.95161 31.0484 0 20 0ZM20.5263 36.8421C11.5118 36.8421 4.21053 29.5408 4.21053 20.5263C4.21053 11.5118 11.5118 4.21053 20.5263 4.21053C29.5408 4.21053 36.8421 11.5118 36.8421 20.5263C36.8421 29.5408 29.5408 36.8421 20.5263 36.8421ZM18.2986 22.2466L25.2955 27.1847C25.7406 27.4968 26.3587 27.4008 26.6801 26.9766L28.2295 24.9037C28.5509 24.4715 28.4602 23.8713 28.0152 23.5592L22.5099 19.6695V8.32882C22.5099 7.8006 22.0649 7.36842 21.521 7.36842H18.8837C18.3398 7.36842 17.8947 7.8006 17.8947 8.32882V21.4703C17.8947 21.7744 18.0431 22.0625 18.2986 22.2466Z"
+                                    fill="#3651F8" />
+                                </svg><span>С 9:00 до 17:00</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <form class="form feedback__form" action="#">
+                    <div class="form__body">
+                        <div class="form__field">
+                            <input class="form__input" type="text" placeholder="Имя" name="name" required>
+                        </div>
+                        <div class="form__field">
+                            <input class="form__input" type="text" placeholder="Телефон" name="phone" required>
+                        </div>
+                        <div class="form__field">
+                            <textarea class="form__textarea" placeholder="Текст сообщения" name="textarea" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <button class="btn is-orange form__send" type="submit">Оставить заявку</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- end section-->
+        <footer class="footer">
+            <div class="footer__container container">
+                <div class="footer__left">
+                    <img class="footer__logo" src="assets/img/general/logo.svg" alt="" width="259" height="40">
+                    <div class="footer__copyright">© АРХ ТРАСНФЕР, 2023 г.</div><a class="footer__studio" href="#">Разработано в<img src="assets/img/general/studio.svg" alt=""></a>
+                </div>
+                <div class="footer__center">
+                    <div class="footer__heading">Полезные ссылки</div>
+                    <ul class="footer__list">
+                        <li class="footer__item"> <a class="footer__link" href="#">Политика конфиденциальности</a>
+                        </li>
+                        <li class="footer__item"> <a class="footer__link" href="#">Юридическая информация</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn is-orange footer__button js-open-modal" data-modal="order">Оставить заявку</button>
+            </div>
+        </footer>
+        <!-- modal-->
+        <div class="modal js-modal" data-modal="callback">
+            <div class="modal__close js-close-modal"></div>
+            <div class="modal__inner">
+                <div class="modal__header">
+                    <div class="modal__title">Заказать звонок</div>
+                    <div class="modal__caption">Оставьте свой номер телефона и мы вам перезвоним. В рабочее время перезвоним в течение 15 минут</div>
+                </div>
+                <form class="form modal__form" action="#">
+                    <div class="form__body">
+                        <div class="form__field">
+                            <input class="form__input" type="tel" placeholder="Телефон" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <button class="btn is-orange form__send" type="submit">Оставить заявку</button>
+                    </div>
+                </form>
+                <div class="modal__footer">
+                    <div class="modal__policy">Нажимая на кнопку вы соглашаетесь на обработку <a href="#">персональных данных</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-->
+        <!-- modal-->
+        <div class="modal js-modal" data-modal="order">
+            <div class="modal__close js-close-modal"></div>
+            <div class="modal__inner">
+                <div class="modal__header">
+                    <div class="modal__title">Оставить заявку</div>
+                    <div class="modal__caption">Оставьте свой номер телефона и мы вам перезвоним. В рабочее время перезвоним в течение 15 минут</div>
+                </div>
+                <form class="form modal__form" action="#">
+                    <div class="form__body">
+                        <div class="form__field">
+                            <input class="form__input" type="text" placeholder="Имя" name="name" required>
+                        </div>
+                        <div class="form__field">
+                            <input class="form__input" type="tel" placeholder="Телефон" name="phone" required>
+                        </div>
+                        <div class="form__field">
+                            <textarea class="form__textarea" placeholder="Текст сообщения" name="textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <button class="btn is-orange form__send" type="submit">Оставить заявку</button>
+                    </div>
+                </form>
+                <div class="modal__footer">
+                    <div class="modal__policy">Нажимая на кнопку вы соглашаетесь на обработку <a href="#">персональных данных</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-->
+        <!-- modal-->
+        <div class="modal js-modal" data-modal="bus">
+            <div class="modal__close js-close-modal"></div>
+            <div class="modal__inner">
+                <div class="modal__header">
+                    <div class="modal__title">Заказать автобус</div>
+                    <div class="modal__caption">Оставьте свой номер телефона и мы вам перезвоним. В рабочее время перезвоним в течение 15 минут</div>
+                </div>
+                <form class="form modal__form" action="#">
+                    <div class="form__body">
+                        <div class="form__field">
+                            <input class="form__input" type="text" placeholder="Имя" name="name" required>
+                        </div>
+                        <div class="form__field">
+                            <input class="form__input" type="tel" placeholder="Телефон" name="phone" required>
+                        </div>
+                        <div class="form__field">
+                            <div class="form__grid">
+                                <div class="form__field col-5">
+                                    <div class="custom-select">
+                                        <div class="custom-select__field">
+                                            <input type="text" class="select-input" placeholder="Вид автобуса" readonly name="bus_type">
+                                        </div>
+                                        <div class="select-dropdown">
+                                            <div class="select-option">Option 1</div>
+                                            <div class="select-option">Option 2</div>
+                                            <div class="select-option">Option 3</div>
+                                            <div class="select-option">Option 4</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__field col-5">
+                                    <div class="custom-select">
+                                        <div class="custom-select__field">
+                                            <input type="text" class="select-input" placeholder="Для каких целей" readonly name="bus_target">
+                                        </div>
+                                        <div class="select-dropdown">
+                                            <div class="select-option">Option 11</div>
+                                            <div class="select-option">Option 22</div>
+                                            <div class="select-option">Option 33</div>
+                                            <div class="select-option">Option 44</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__field">
+                            <div class="form__grid for-mob">
+                                <div class="form__field col-5">
+                                    <div class="datepicker">
+                                        <input class="datepicker__input js-calendar" type="text" placeholder="Дата" name="bus_date">
+                                    </div>
+                                </div>
+                                <div class="form__field col-5">
+                                    <div class="timepicker">
+                                        <input class="timepicker__input" type="time" maxlength="5" placeholder="Время" name="bus_time">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <button class="btn is-orange form__send" type="submit">Оставить заявку</button>
+                    </div>
+                </form>
+                <div class="modal__footer">
+                    <div class="modal__policy">Нажимая на кнопку вы соглашаетесь на обработку <a href="#">персональных данных</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end modal-->
+        <script src="assets/js/main.min.js"></script>
+        <script src="assets/js/separate-js/common.js"></script>
+
+
+    </body>
+
+</html>
