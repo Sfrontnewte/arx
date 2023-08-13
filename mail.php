@@ -1,6 +1,6 @@
 <?php
  
-require 'PHPMailer/PHPMailerAutoload.php';
+require 'PHPMailerAutoload.php';
  
 $mail = new PHPMailer;
  
@@ -12,7 +12,7 @@ $mail->Password = 'dgjgnja1';                   //Пароль
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
  
-$mail->setFrom('robot@devreadwrite.com', 'Robot');
+$mail->setFrom('avacode121@gmail.com', 'Robot');
 $mail->isHTML(true);
  
 $mail->Subject = 'Тема письма';

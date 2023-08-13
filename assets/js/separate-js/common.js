@@ -583,6 +583,8 @@ const catalog = new Catalog('js-section-sorting', 'js-catalog-modal .modal-galle
 
 
 document.querySelector('.js-modal').addEventListener('submit', function(e){
+  let name = document.querySelector('.js-modal input[type="text"]');
+  let tel = document.querySelector('.js-modal input[type="tel"]');
 
   if(name.value.length <= 2){
       name.parentNode.classList.add('error');
