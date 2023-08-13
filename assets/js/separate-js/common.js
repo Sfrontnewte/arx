@@ -45,8 +45,6 @@ for (let i = 0; i < sectionSliders.length; i++) {
     pageSlider.mount();
 }
 
-
-
 function handleButtonClick(button, list) {
     list.classList.add('is-active');
     button.remove();
@@ -206,91 +204,128 @@ const cardGrid = new CardGrid();
   
 
 class MenuHandler {
-    constructor() {
-      this.menuBtn = document.querySelector('.header__menu-btn');
-      this.closeBtn = document.querySelector('.header-menu__close');
+  constructor() {
+    this.menuBtn = document.querySelector('.header__menu-btn');
+    this.closeBtn = document.querySelector('.header-menu__close');
+    this.links = document.querySelectorAll('.header-menu__link');
 
-      this.menuBtn.addEventListener('click', this.openMenu.bind(this));
-      this.closeBtn.addEventListener('click', this.closeMenu.bind(this));
-    }
+    this.menuBtn.addEventListener('click', this.openMenu.bind(this));
+    this.closeBtn.addEventListener('click', this.closeMenu.bind(this));
 
-    openMenu() {
-      document.body.classList.add('is-menu');
-    }
+    this.links.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        this.closeMenu();
+        const targetSectionId = link.getAttribute('href');
+        this.scrollToSection(targetSectionId);
+      });
+    });
+  }
 
-    closeMenu() {
-      document.body.classList.remove('is-menu');
+  openMenu() {
+    document.body.classList.add('is-menu');
+  }
+
+  closeMenu() {
+    document.body.classList.remove('is-menu');
+  }
+
+  scrollToSection(targetId) {
+    const targetSection = document.querySelector(targetId);
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: 'smooth'
+      });
     }
+  }
 }
-
 const menuHandler = new MenuHandler();
 
 
-baguetteBox.run('.js-gallery');
-
-
-
-var modalButtons = document.querySelectorAll('.js-open-modal'),
-    overlay      = document.querySelector('.overlay'),
-    closeBtn = document.querySelectorAll('.js-close-modal'),
-    succesClose = document.querySelectorAll('.js-close-success'),
-    page = document.querySelector('.page');
-
-modalButtons.forEach(function(item){
-    item.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        var modalId = this.getAttribute('data-modal'),
-            modalElem = document.querySelector('.js-modal[data-modal="' + modalId + '"]');
-
-        modalElem.classList.add('active');
-        page.classList.add('is-modal');
-
-        page.classList.remove('is-menu');
-    });
-});
-
-
-closeBtn.forEach(function(item){
-
-    item.addEventListener('click', function(e) {
-        if(document.querySelector('.js-modal.active')){
-            document.querySelector('.js-modal.active').classList.remove('active');
-        }
-        page.classList.remove('is-modal');
-        document.querySelector('.js-success-modal').style.display = 'none';
+class StickyHeaderManager {
+  constructor() {
+    this.header = document.querySelector(".header");
+    this.headerHeight = this.header.offsetHeight;
+    
+    window.addEventListener("scroll", this.handleScroll.bind(this));
+    
+    document.addEventListener("DOMContentLoaded", () => {
+      this.handleScroll();
     });
 
-}); // end foreach
+  }
 
-succesClose.forEach(function(item){
+  handleScroll() {
+    const scrollPosition = window.scrollY;
 
-    item.addEventListener('click', function(e) {
-        page.classList.remove('is-modal');
-        document.querySelector('.js-success-modal').style.display = 'none';
-    });
-
-}); 
-
-document.body.addEventListener('keyup', function (e) {
-    var key = e.keyCode;
-
-    if (key == 27) {
-
-        document.querySelector('.js-modal.active').classList.remove('active');
-        page.classList.remove('is-modal');
-        document.querySelector('.js-success-modal').style.display = 'none';
-    };
-}, false);
-
-overlay.addEventListener('click', function() {
-
-    if(document.querySelector('.js-modal.active')){
-        document.querySelector('.js-modal.active').classList.remove('active');
-        page.classList.remove('is-modal');
-        document.querySelector('.js-success-modal').style.display = 'none';
+    if (scrollPosition > this.headerHeight) {
+      this.header.classList.add("sticky");
+    } else {
+      this.header.classList.remove("sticky");
     }
-});
+  }
+}
+
+new StickyHeaderManager;
+
+
+class ModalManager {
+  constructor() {
+      this.modalButtons = document.querySelectorAll('.js-open-modal');
+      this.overlay = document.querySelector('.overlay');
+      this.page = document.querySelector('.page');
+      this.activeModal = null;
+
+      this.modalButtons.forEach(item => {
+          item.addEventListener('click', e => this.openModal(e));
+      });
+
+
+      this.overlay.addEventListener('click', e => this.closeModal());
+
+
+      document.body.addEventListener('click', e => this.handleBodyClick(e));
+      document.body.addEventListener('keyup', e => this.handleKeyPress(e), false);
+  }
+
+  openModal(e) {
+      e.preventDefault();
+
+      const modalId = e.target.getAttribute('data-modal');
+      this.activeModal = document.querySelector(`.js-modal[data-modal="${modalId}"]`);
+
+      if (this.activeModal) {
+          this.activeModal.classList.add('active');
+          this.page.classList.add('is-modal');
+          this.page.classList.remove('is-menu');
+          this.page.classList.remove('is-media-modal');
+      }
+  }
+
+  closeModal() {
+    document.querySelectorAll('.js-modal').forEach(option => {
+      option.classList.remove('active');
+    });
+
+    document.querySelector('body').classList.remove('is-modal');
+  }
+
+  handleBodyClick(e) {
+      const closeBtn = e.target.closest('.js-close-modal');
+      if (closeBtn) {
+          this.closeModal();
+      }
+  }
+
+  handleKeyPress(e) {
+      if (e.keyCode === 27) {
+          this.closeModal();
+      }
+  }
+}
+
+const modalManager = new ModalManager();
 
 var eventCalllback = function (e) {
     var el = e.target,
@@ -371,4 +406,219 @@ var dpBelow = TinyDatePicker('.js-calendar', {
         clear: 'Очистить',
         close: 'Закрыть'
       }
+});
+
+class Gallery {
+  constructor(parentClass, modalSliderClass) {
+      this.parentClass = parentClass;
+      this.modalSliderClass = modalSliderClass;
+      this.activeSlideIndex = 0; 
+
+      this.initialize();
+  }
+
+  initialize() {
+      const parentSections = document.querySelectorAll(`.${this.parentClass}`);
+      parentSections.forEach((parent) => {
+          const previewCards = parent.querySelectorAll('[data-full-image]');
+          const modalSlider = parent.querySelector(`.${this.modalSliderClass}`);
+          const modal = parent.querySelector('.js-gallery-modal');
+          const closeModal = parent.querySelectorAll('.js-close-gallery');
+
+          previewCards.forEach((card, index) => {
+              card.addEventListener('click', () => this.openModal(modal, modalSlider, previewCards, index));
+          });
+
+          closeModal.forEach((card) => {
+            card.addEventListener('click', () => this.closeModalFunction(modal));
+        });
+
+      });
+  }
+
+  openModal(modal, modalSlider, previewCards, index) {
+      document.querySelector('body').classList.add('is-modal');
+      modal.style.display = 'flex';
+      modalSlider.innerHTML = '';
+
+      const originalSlides = Array.from(previewCards).filter((slide) => !slide.classList.contains('splide__slide--clone'));
+
+      originalSlides.forEach((slide, slideIndex) => {
+          const slideImage = slide.getAttribute('data-full-image');
+          const slideDiv = document.createElement('div');
+          slideDiv.classList.add('splide__slide');
+          slideDiv.innerHTML = `<img src="${slideImage}" alt="">`;
+          modalSlider.appendChild(slideDiv);
+      });
+
+      this.activeSlideIndex = index;
+
+      const modalSliders = modal.querySelectorAll('.js-modal-slider');
+
+      for (let i = 0; i < modalSliders.length; i++) {
+          const pageSlider = new Splide(modalSliders[i], {
+              type: 'loop',
+              focus: 'center',
+              perPage: 1,
+              arrows: true,
+              pagination: false,
+              start: this.activeSlideIndex,
+          });
+
+          pageSlider.mount();
+      }
+  }
+
+  closeModalFunction(modal) {
+      modal.style.display = 'none';
+      document.querySelector('body').classList.remove('is-modal');
+  }
+}
+
+const gallery = new Gallery('js-gallery-section', 'js-modal-slider .splide__list');
+
+
+
+class Catalog {
+  constructor(parentClass, modalSliderClass) {
+    this.parentClass = parentClass;
+    this.modalSliderClass = modalSliderClass;
+    this.activeSlideIndex = 0;
+
+    this.initialize();
+  }
+
+  initialize() {
+    const parentSections = document.querySelectorAll(`.${this.parentClass}`);
+    parentSections.forEach((parent) => {
+      const previewCards = parent.querySelectorAll('.catalog-card');
+      const modalSlider = parent.querySelector(`.${this.modalSliderClass}`);
+      const modal = parent.querySelector('.js-catalog-modal');
+      const closeModal = parent.querySelectorAll('.js-close-gallery');
+      const showModal = parent.querySelectorAll('.grid__col .catalog-card__btn');
+
+      previewCards.forEach((card, index) => {
+        card.addEventListener('click', () => this.openModal(modal, modalSlider, card));
+      });
+
+      closeModal.forEach((card) => {
+        card.addEventListener('click', () => this.closeModalFunction(modal));
+      });
+
+      showModal.forEach((btn) => {
+        btn.addEventListener('click', (event) => {
+          event.stopPropagation();
+        });
+      });
+    });
+
+    
+  }
+
+  openModal(modal, modalSlider, clickedCard) {
+    document.querySelector('body').classList.add('is-media-modal');
+    modal.style.display = 'flex';
+    modalSlider.innerHTML = '';
+  
+
+    const cardHTML = clickedCard.outerHTML;
+
+    const close = document.createElement('div');
+    close.classList.add('modal-gallery__close');
+    close.classList.add('js-close-gallery');
+
+    const slideDiv = document.createElement('div');
+    slideDiv.classList.add('splide__slide');
+    
+    slideDiv.innerHTML = cardHTML;
+
+    modalSlider.innerHTML = cardHTML;
+    modalSlider.appendChild(close);
+    
+    
+    const catalogSlider = document.querySelector('.modal-gallery .js-catalog-slider');
+
+    const pageSlider = new Splide(catalogSlider, {
+      type: 'loop',
+      focus: 'center',
+      perPage: 1,
+      arrows: true,
+      pagination: false
+    });
+    pageSlider.mount();
+
+    document.querySelector('.modal-gallery .catalog-card__btn').addEventListener('click', e => this.openModalOrder(e));
+
+    close.addEventListener('click', () => this.closeModalFunction(modal));
+
+
+  }
+
+  closeModalFunction(modal) {
+    modal.style.display = 'none';
+    document.querySelector('body').classList.remove('is-media-modal');
+  }
+
+  openModalOrder(e, modal) {
+
+    const modalId = e.target.getAttribute('data-modal');
+    this.activeModal = document.querySelector(`.js-modal[data-modal="${modalId}"]`);
+    
+    document.querySelector('.js-catalog-modal').style.display = 'none';
+    document.querySelector('body').classList.remove('is-media-modal');
+  
+
+    if (this.activeModal) {
+        this.activeModal.classList.add('active');
+        document.querySelector('body').classList.add('is-modal');
+        document.querySelector('body').classList.remove('is-menu');
+        document.querySelector('body').classList.remove('is-media-modal');
+    }
+}
+}
+
+const catalog = new Catalog('js-section-sorting', 'js-catalog-modal .modal-gallery__content');
+
+
+
+
+document.querySelector('.js-modal').addEventListener('submit', function(e){
+
+  if(name.value.length <= 2){
+      name.parentNode.classList.add('error');
+  } else {
+      name.parentNode.classList.remove('error');
+  }
+
+  if(tel.value.length <= 11){
+      tel.parentNode.classList.add('error');
+  } else {
+      tel.parentNode.classList.remove('error');
+  }
+
+
+  if(name.value.length >= 3 && tel.value.length){
+      e.preventDefault();
+      var request = new XMLHttpRequest();
+      request.onreadystatechange = function() { 
+
+          if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+              console.log('success');
+              document.querySelector('.js-modal.active').classList.remove('active');
+              document.querySelector('.js-success-modal').style.display = 'inline-flex';
+              name.value = "";
+              tel.value = "";
+          }
+      }
+
+          request.open(this.method, this.action, true);
+
+          var data = new FormData(this);
+          for (var key of data.keys());
+              
+          request.send(data);
+  } else {
+      e.preventDefault();
+  }
+  
 });

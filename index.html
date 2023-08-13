@@ -40,19 +40,19 @@
             <div class="header-menu__container container">
                 <div class="header-menu__close"></div>
                 <ul class="header-menu__list">
-                    <li class="header-menu__item"> <a class="header-menu__link" href="#">Выбор автобусов</a>
+                    <li class="header-menu__item"> <a class="header-menu__link" href="#s1">Выбор автобусов</a>
                     </li>
-                    <li class="header-menu__item"> <a class="header-menu__link" href="#">Заказать автобус</a>
+                    <li class="header-menu__item"> <a class="header-menu__link" href="#s2">Заказать автобус</a>
                     </li>
-                    <li class="header-menu__item"> <a class="header-menu__link" href="#">Для каких задач</a>
+                    <li class="header-menu__item"> <a class="header-menu__link" href="#s3">Для каких задач</a>
                     </li>
-                    <li class="header-menu__item"> <a class="header-menu__link" href="#">Лицензия на перевозку</a>
+                    <li class="header-menu__item"> <a class="header-menu__link" href="#s4">Лицензия на перевозку</a>
                     </li>
-                    <li class="header-menu__item"> <a class="header-menu__link" href="#">Благодарственные письма</a>
+                    <li class="header-menu__item"> <a class="header-menu__link" href="#s5">Благодарственные письма</a>
                     </li>
-                    <li class="header-menu__item"> <a class="header-menu__link" href="#">Частые вопросы</a>
+                    <li class="header-menu__item"> <a class="header-menu__link" href="#s6">Частые вопросы</a>
                     </li>
-                    <li class="header-menu__item"> <a class="header-menu__link" href="#">Связаться с нами</a>
+                    <li class="header-menu__item"> <a class="header-menu__link" href="#s7">Связаться с нами</a>
                     </li>
                 </ul>
                 <div class="header-menu__actions"> <a class="header-menu__phone" href="tel:+79004597887">+7 900 459 78 87</a>
@@ -61,7 +61,7 @@
             </div>
         </div>
         <!-- promo-->
-        <div class="promo" style="background: url('assets/img/general/promo.jpg') no-repeat; background-size: cover;">
+        <div class="promo" style="background: url('assets/img/general/promo.jpg') no-repeat; background-size: cover; background-position: center;">
             <div class="promo__container container">
                 <h1 class="promo__title">Аренда автобусов с водителем</h1>
                 <div class="promo__caption">В Архангельске и по России</div>
@@ -73,13 +73,13 @@
         <section class="page-slider splide">
             <div class="page-slider__track splide__track">
                 <div class="page-slider__list splide__list">
-                    <div class="page-slider__item splide__slide"><a href="#">Более 10 лет опыта водителей</a>
+                    <div class="page-slider__item splide__slide"><span>Более 10 лет опыта водителей</span>
                     </div>
-                    <div class="page-slider__item splide__slide"><a href="#">Комфортные автобусы</a>
+                    <div class="page-slider__item splide__slide"><span>Комфортные автобусы</span>
                     </div>
-                    <div class="page-slider__item splide__slide"><a href="#">Страхование пассажиров</a>
+                    <div class="page-slider__item splide__slide"><span>Страхование пассажиров</span>
                     </div>
-                    <div class="page-slider__item splide__slide"><a href="#">Заблаговременная подача автобуса</a>
+                    <div class="page-slider__item splide__slide"><span>Заблаговременная подача автобуса</span>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
         </section>
         <!-- end section-->
         <!-- section-->
-        <section class="section is-dark js-section-sorting js-gallery">
+        <section class="section is-dark js-section-sorting" id="s1">
             <div class="section__container container">
                 <div class="section__header">
                     <h2 class="section__title is-center">Большой выбор автобусов</h2>
@@ -109,19 +109,32 @@
                     <!-- col-->
                     <div class="grid__col col-5 item1">
                         <div class="catalog-card">
-                            <a class="catalog-card__photo" href="#">
-                                <img src="assets/img/general/pic.png" alt="">
-                            </a>
+                            <div class="splide catalog-card__photo js-catalog-slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/pic.png" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b2.jpg" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b1.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="catalog-card__data">
                                 <div class="catalog-card__title">Volkswagen T-57</div>
                                 <div class="catalog-card__fields">
-                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    <div class="catalog-card__field"> <span>Количество мест</span><span>8</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    <div class="catalog-card__field"> <span>Цена за час</span><span>от 900₽ (мин. 2 часа)</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    <div class="catalog-card__field"> <span>Цена за км.</span><span>от 40₽/км</span>
                                     </div>
                                 </div>
+                                <button class="btn is-orange is-outline catalog-card__btn js-open-modal" data-modal="bus">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -129,19 +142,32 @@
                     <!-- col-->
                     <div class="grid__col col-5 item1">
                         <div class="catalog-card">
-                            <a class="catalog-card__photo" href="#">
-                                <img src="assets/img/general/pic.png" alt="">
-                            </a>
+                            <div class="splide catalog-card__photo js-catalog-slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/pic.png" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b2.jpg" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b1.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="catalog-card__data">
                                 <div class="catalog-card__title">Volkswagen T-57</div>
                                 <div class="catalog-card__fields">
-                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    <div class="catalog-card__field"> <span>Количество мест</span><span>8</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    <div class="catalog-card__field"> <span>Цена за час</span><span>от 900₽ (мин. 2 часа)</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    <div class="catalog-card__field"> <span>Цена за км.</span><span>от 40₽/км</span>
                                     </div>
                                 </div>
+                                <button class="btn is-orange is-outline catalog-card__btn js-open-modal" data-modal="bus">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -149,19 +175,32 @@
                     <!-- col-->
                     <div class="grid__col col-5 item1">
                         <div class="catalog-card">
-                            <a class="catalog-card__photo" href="#">
-                                <img src="assets/img/general/pic.png" alt="">
-                            </a>
+                            <div class="splide catalog-card__photo js-catalog-slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/pic.png" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b2.jpg" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b1.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="catalog-card__data">
                                 <div class="catalog-card__title">Volkswagen T-57</div>
                                 <div class="catalog-card__fields">
-                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    <div class="catalog-card__field"> <span>Количество мест</span><span>8</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    <div class="catalog-card__field"> <span>Цена за час</span><span>от 900₽ (мин. 2 часа)</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    <div class="catalog-card__field"> <span>Цена за км.</span><span>от 40₽/км</span>
                                     </div>
                                 </div>
+                                <button class="btn is-orange is-outline catalog-card__btn js-open-modal" data-modal="bus">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -169,19 +208,32 @@
                     <!-- col-->
                     <div class="grid__col col-5 item2">
                         <div class="catalog-card">
-                            <a class="catalog-card__photo" href="#">
-                                <img src="assets/img/general/pic.png" alt="">
-                            </a>
+                            <div class="splide catalog-card__photo js-catalog-slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/pic.png" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b2.jpg" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b1.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="catalog-card__data">
                                 <div class="catalog-card__title">Volkswagen T-57</div>
                                 <div class="catalog-card__fields">
-                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    <div class="catalog-card__field"> <span>Количество мест</span><span>8</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    <div class="catalog-card__field"> <span>Цена за час</span><span>от 900₽ (мин. 2 часа)</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    <div class="catalog-card__field"> <span>Цена за км.</span><span>от 40₽/км</span>
                                     </div>
                                 </div>
+                                <button class="btn is-orange is-outline catalog-card__btn js-open-modal" data-modal="bus">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -189,19 +241,32 @@
                     <!-- col-->
                     <div class="grid__col col-5 item2">
                         <div class="catalog-card">
-                            <a class="catalog-card__photo" href="#">
-                                <img src="assets/img/general/pic.png" alt="">
-                            </a>
+                            <div class="splide catalog-card__photo js-catalog-slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/pic.png" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b2.jpg" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b1.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="catalog-card__data">
                                 <div class="catalog-card__title">Volkswagen T-57</div>
                                 <div class="catalog-card__fields">
-                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    <div class="catalog-card__field"> <span>Количество мест</span><span>8</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    <div class="catalog-card__field"> <span>Цена за час</span><span>от 900₽ (мин. 2 часа)</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    <div class="catalog-card__field"> <span>Цена за км.</span><span>от 40₽/км</span>
                                     </div>
                                 </div>
+                                <button class="btn is-orange is-outline catalog-card__btn js-open-modal" data-modal="bus">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -209,19 +274,32 @@
                     <!-- col-->
                     <div class="grid__col col-5 item3">
                         <div class="catalog-card">
-                            <a class="catalog-card__photo" href="#">
-                                <img src="assets/img/general/pic.png" alt="">
-                            </a>
+                            <div class="splide catalog-card__photo js-catalog-slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/pic.png" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b2.jpg" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b1.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="catalog-card__data">
                                 <div class="catalog-card__title">Volkswagen T-57</div>
                                 <div class="catalog-card__fields">
-                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    <div class="catalog-card__field"> <span>Количество мест</span><span>8</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    <div class="catalog-card__field"> <span>Цена за час</span><span>от 900₽ (мин. 2 часа)</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    <div class="catalog-card__field"> <span>Цена за км.</span><span>от 40₽/км</span>
                                     </div>
                                 </div>
+                                <button class="btn is-orange is-outline catalog-card__btn js-open-modal" data-modal="bus">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -229,19 +307,32 @@
                     <!-- col-->
                     <div class="grid__col col-5 item4">
                         <div class="catalog-card">
-                            <a class="catalog-card__photo" href="#">
-                                <img src="assets/img/general/pic.png" alt="">
-                            </a>
+                            <div class="splide catalog-card__photo js-catalog-slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/pic.png" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b2.jpg" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b1.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="catalog-card__data">
                                 <div class="catalog-card__title">Volkswagen T-57</div>
                                 <div class="catalog-card__fields">
-                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    <div class="catalog-card__field"> <span>Количество мест</span><span>8</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    <div class="catalog-card__field"> <span>Цена за час</span><span>от 900₽ (мин. 2 часа)</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    <div class="catalog-card__field"> <span>Цена за км.</span><span>от 40₽/км</span>
                                     </div>
                                 </div>
+                                <button class="btn is-orange is-outline catalog-card__btn js-open-modal" data-modal="bus">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -249,19 +340,32 @@
                     <!-- col-->
                     <div class="grid__col col-5 item4">
                         <div class="catalog-card">
-                            <a class="catalog-card__photo" href="#">
-                                <img src="assets/img/general/pic.png" alt="">
-                            </a>
+                            <div class="splide catalog-card__photo js-catalog-slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/pic.png" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b2.jpg" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b1.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="catalog-card__data">
                                 <div class="catalog-card__title">Volkswagen T-57</div>
                                 <div class="catalog-card__fields">
-                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    <div class="catalog-card__field"> <span>Количество мест</span><span>8</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    <div class="catalog-card__field"> <span>Цена за час</span><span>от 900₽ (мин. 2 часа)</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    <div class="catalog-card__field"> <span>Цена за км.</span><span>от 40₽/км</span>
                                     </div>
                                 </div>
+                                <button class="btn is-orange is-outline catalog-card__btn js-open-modal" data-modal="bus">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -269,19 +373,32 @@
                     <!-- col-->
                     <div class="grid__col col-5 item1">
                         <div class="catalog-card">
-                            <a class="catalog-card__photo" href="#">
-                                <img src="assets/img/general/pic.png" alt="">
-                            </a>
+                            <div class="splide catalog-card__photo js-catalog-slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/pic.png" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b2.jpg" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b1.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="catalog-card__data">
                                 <div class="catalog-card__title">Volkswagen T-57</div>
                                 <div class="catalog-card__fields">
-                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    <div class="catalog-card__field"> <span>Количество мест</span><span>8</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    <div class="catalog-card__field"> <span>Цена за час</span><span>от 900₽ (мин. 2 часа)</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    <div class="catalog-card__field"> <span>Цена за км.</span><span>от 40₽/км</span>
                                     </div>
                                 </div>
+                                <button class="btn is-orange is-outline catalog-card__btn js-open-modal" data-modal="bus">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -289,19 +406,32 @@
                     <!-- col-->
                     <div class="grid__col col-5 item1">
                         <div class="catalog-card">
-                            <a class="catalog-card__photo" href="#">
-                                <img src="assets/img/general/pic.png" alt="">
-                            </a>
+                            <div class="splide catalog-card__photo js-catalog-slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/pic.png" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b2.jpg" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b1.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="catalog-card__data">
                                 <div class="catalog-card__title">Volkswagen T-57</div>
                                 <div class="catalog-card__fields">
-                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    <div class="catalog-card__field"> <span>Количество мест</span><span>8</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    <div class="catalog-card__field"> <span>Цена за час</span><span>от 900₽ (мин. 2 часа)</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    <div class="catalog-card__field"> <span>Цена за км.</span><span>от 40₽/км</span>
                                     </div>
                                 </div>
+                                <button class="btn is-orange is-outline catalog-card__btn js-open-modal" data-modal="bus">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -309,19 +439,32 @@
                     <!-- col-->
                     <div class="grid__col col-5 item1">
                         <div class="catalog-card">
-                            <a class="catalog-card__photo" href="#">
-                                <img src="assets/img/general/pic.png" alt="">
-                            </a>
+                            <div class="splide catalog-card__photo js-catalog-slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/pic.png" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b2.jpg" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b1.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="catalog-card__data">
                                 <div class="catalog-card__title">Volkswagen T-57</div>
                                 <div class="catalog-card__fields">
-                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    <div class="catalog-card__field"> <span>Количество мест</span><span>8</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    <div class="catalog-card__field"> <span>Цена за час</span><span>от 900₽ (мин. 2 часа)</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    <div class="catalog-card__field"> <span>Цена за км.</span><span>от 40₽/км</span>
                                     </div>
                                 </div>
+                                <button class="btn is-orange is-outline catalog-card__btn js-open-modal" data-modal="bus">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -329,19 +472,32 @@
                     <!-- col-->
                     <div class="grid__col col-5 item2">
                         <div class="catalog-card">
-                            <a class="catalog-card__photo" href="#">
-                                <img src="assets/img/general/pic.png" alt="">
-                            </a>
+                            <div class="splide catalog-card__photo js-catalog-slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/pic.png" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b2.jpg" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b1.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="catalog-card__data">
                                 <div class="catalog-card__title">Volkswagen T-57</div>
                                 <div class="catalog-card__fields">
-                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    <div class="catalog-card__field"> <span>Количество мест</span><span>8</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    <div class="catalog-card__field"> <span>Цена за час</span><span>от 900₽ (мин. 2 часа)</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    <div class="catalog-card__field"> <span>Цена за км.</span><span>от 40₽/км</span>
                                     </div>
                                 </div>
+                                <button class="btn is-orange is-outline catalog-card__btn js-open-modal" data-modal="bus">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -349,19 +505,32 @@
                     <!-- col-->
                     <div class="grid__col col-5 item2">
                         <div class="catalog-card">
-                            <a class="catalog-card__photo" href="#">
-                                <img src="assets/img/general/pic.png" alt="">
-                            </a>
+                            <div class="splide catalog-card__photo js-catalog-slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/pic.png" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b2.jpg" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b1.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="catalog-card__data">
                                 <div class="catalog-card__title">Volkswagen T-57</div>
                                 <div class="catalog-card__fields">
-                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    <div class="catalog-card__field"> <span>Количество мест</span><span>8</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    <div class="catalog-card__field"> <span>Цена за час</span><span>от 900₽ (мин. 2 часа)</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    <div class="catalog-card__field"> <span>Цена за км.</span><span>от 40₽/км</span>
                                     </div>
                                 </div>
+                                <button class="btn is-orange is-outline catalog-card__btn js-open-modal" data-modal="bus">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -369,19 +538,32 @@
                     <!-- col-->
                     <div class="grid__col col-5 item3">
                         <div class="catalog-card">
-                            <a class="catalog-card__photo" href="#">
-                                <img src="assets/img/general/pic.png" alt="">
-                            </a>
+                            <div class="splide catalog-card__photo js-catalog-slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/pic.png" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b2.jpg" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b1.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="catalog-card__data">
                                 <div class="catalog-card__title">Volkswagen T-57</div>
                                 <div class="catalog-card__fields">
-                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    <div class="catalog-card__field"> <span>Количество мест</span><span>8</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    <div class="catalog-card__field"> <span>Цена за час</span><span>от 900₽ (мин. 2 часа)</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    <div class="catalog-card__field"> <span>Цена за км.</span><span>от 40₽/км</span>
                                     </div>
                                 </div>
+                                <button class="btn is-orange is-outline catalog-card__btn js-open-modal" data-modal="bus">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -389,19 +571,32 @@
                     <!-- col-->
                     <div class="grid__col col-5 item4">
                         <div class="catalog-card">
-                            <a class="catalog-card__photo" href="#">
-                                <img src="assets/img/general/pic.png" alt="">
-                            </a>
+                            <div class="splide catalog-card__photo js-catalog-slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/pic.png" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b2.jpg" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b1.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="catalog-card__data">
                                 <div class="catalog-card__title">Volkswagen T-57</div>
                                 <div class="catalog-card__fields">
-                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    <div class="catalog-card__field"> <span>Количество мест</span><span>8</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    <div class="catalog-card__field"> <span>Цена за час</span><span>от 900₽ (мин. 2 часа)</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    <div class="catalog-card__field"> <span>Цена за км.</span><span>от 40₽/км</span>
                                     </div>
                                 </div>
+                                <button class="btn is-orange is-outline catalog-card__btn js-open-modal" data-modal="bus">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -409,19 +604,29 @@
                     <!-- col-->
                     <div class="grid__col col-5 item4">
                         <div class="catalog-card">
-                            <a class="catalog-card__photo" href="#">
-                                <img src="assets/img/general/pic.png" alt="">
-                            </a>
+                            <div class="splide catalog-card__photo js-catalog-slider">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/pic.png" alt="">
+                                        </div>
+                                        <div class="splide__slide">
+                                            <img src="assets/img/general/b2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="catalog-card__data">
                                 <div class="catalog-card__title">Volkswagen T-57</div>
                                 <div class="catalog-card__fields">
-                                    <div class="catalog-card__field">Количество мест<span>8</span>
+                                    <div class="catalog-card__field"> <span>Количество мест</span><span>8</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за час<span>от 900₽ (мин. 2 часа)</span>
+                                    <div class="catalog-card__field"> <span>Цена за час</span><span>от 900₽ (мин. 2 часа)</span>
                                     </div>
-                                    <div class="catalog-card__field">Цена за км.<span>от 40₽/км</span>
+                                    <div class="catalog-card__field"> <span>Цена за км.</span><span>от 40₽/км</span>
                                     </div>
                                 </div>
+                                <button class="btn is-orange is-outline catalog-card__btn js-open-modal" data-modal="bus">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -431,10 +636,17 @@
                     <div class="section__load-more-cards btn is-orange is-outline">Показать все</div>
                 </div>
             </div>
+            <div class="modal-gallery js-catalog-modal">
+                <div class="modal-gallery__inner js-close-gallery"></div>
+                <div class="modal-gallery__slider">
+                    <div class="modal-gallery__close js-close-gallery"></div>
+                    <div class="modal-gallery__content"></div>
+                </div>
+            </div>
         </section>
         <!-- end section-->
         <!-- section-->
-        <section class="order section">
+        <section class="order section" id="s2">
             <div class="order__container container">
                 <div class="order__data">
                     <h2 class="order__title">Заказать автобус</h2>
@@ -454,7 +666,7 @@
         </section>
         <!-- end section-->
         <!-- section-->
-        <section class="section">
+        <section class="section" id="s3">
             <div class="section__container container">
                 <div class="section__header">
                     <h2 class="section__title is-center">Аренда автобусов для любых задач</h2>
@@ -569,60 +781,68 @@
         </section>
         <!-- end section-->
         <!-- section-->
-        <section class="license section is-dark js-gallery">
+        <section class="license section is-dark js-gallery-section" id="s4">
             <div class="license__container container">
                 <div class="license__data">
                     <h2 class="license__title">Действующая лицензия на перевозку пассажиров</h2>
-                    <div class="license__caption">Стратегия позиционирования обуславливает медиабизнес, осознавая социальную ответственность бизнеса.</div><a class="btn is-orange license__button" href="assets/img/general/license.png">Открыть лиценизию</a>
+                    <div class="license__caption">Стратегия позиционирования обуславливает медиабизнес, осознавая социальную ответственность бизнеса.</div><a class="btn is-orange license__button" data-full-image="assets/img/general/license.png">Открыть лиценизию</a>
                 </div>
-                <a class="license__img" href="assets/img/general/license.png">
+                <div class="license__img" data-full-image="assets/img/general/license.png">
                     <img src="assets/img/general/license.png" alt="">
-                </a>
+                </div>
+                <div class="modal-gallery js-gallery-modal">
+                    <div class="modal-gallery__inner js-close-gallery"></div>
+                    <div class="modal-gallery__slider splide js-modal-slider">
+                        <span class="modal-gallery__close js-close-gallery"></span>
+                        <div class="splide__track">
+                            <div class="splide__list"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- end section-->
         <!-- section-->
-        <section class="section js-gallery">
+        <section class="section js-gallery-section" id="s5">
             <div class="section__container container">
                 <div class="section__header">
                     <h2 class="section__title is-center">Благодарственные письма</h2>
                 </div>
-                <section class="section__slider splide js-section-slider">
+                <div class="section__slider splide js-section-slider">
                     <div class="section__slider-track splide__track">
                         <div class="section__slider-list splide__list">
                             <div class="section__slider-item splide__slide">
-                                <a class="preview-card" href="assets/img/general/pic.png">
+                                <div class="preview-card" data-full-image="assets/img/general/b1.jpeg">
                                     <img src="assets/img/general/pic.png" alt="">
-                                </a>
+                                </div>
                             </div>
                             <div class="section__slider-item splide__slide">
-                                <a class="preview-card" href="assets/img/general/pic.png">
+                                <div class="preview-card" data-full-image="assets/img/general/b1.jpeg">
                                     <img src="assets/img/general/pic.png" alt="">
-                                </a>
+                                </div>
                             </div>
                             <div class="section__slider-item splide__slide">
-                                <a class="preview-card" href="assets/img/general/pic.png">
+                                <div class="preview-card" data-full-image="assets/img/general/b1.jpeg">
                                     <img src="assets/img/general/pic.png" alt="">
-                                </a>
+                                </div>
                             </div>
                             <div class="section__slider-item splide__slide">
-                                <a class="preview-card" href="assets/img/general/pic.png">
+                                <div class="preview-card" data-full-image="assets/img/general/b1.jpeg">
                                     <img src="assets/img/general/pic.png" alt="">
-                                </a>
-                            </div>
-                            <div class="section__slider-item splide__slide">
-                                <a class="preview-card" href="assets/img/general/pic.png">
-                                    <img src="assets/img/general/pic.png" alt="">
-                                </a>
-                            </div>
-                            <div class="section__slider-item splide__slide">
-                                <a class="preview-card" href="assets/img/general/pic.png">
-                                    <img src="assets/img/general/pic.png" alt="">
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+                <div class="modal-gallery js-gallery-modal">
+                    <div class="modal-gallery__inner js-close-gallery"></div>
+                    <div class="modal-gallery__slider splide js-modal-slider">
+                        <span class="modal-gallery__close js-close-gallery"></span>
+                        <div class="splide__track">
+                            <div class="splide__list"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- end section-->
@@ -690,7 +910,7 @@
         </section>
         <!-- end section-->
         <!-- section-->
-        <section class="section is-dark">
+        <section class="section is-dark" id="s6">
             <div class="section__container container">
                 <div class="section__header">
                     <h2 class="section__title is-center">Часто задаваемые вопросы</h2>
@@ -718,7 +938,7 @@
         </section>
         <!-- end section-->
         <!-- section-->
-        <section class="feedback section">
+        <section class="feedback section" id="s7">
             <div class="feedback__container container">
                 <div class="feedback__data">
                     <div class="feedback__header">
@@ -811,7 +1031,7 @@
                     <div class="modal__title">Заказать звонок</div>
                     <div class="modal__caption">Оставьте свой номер телефона и мы вам перезвоним. В рабочее время перезвоним в течение 15 минут</div>
                 </div>
-                <form class="form modal__form" action="#">
+                <form class="form modal__form" method="POST" action="mail.php">
                     <div class="form__body">
                         <div class="form__field">
                             <input class="form__input" type="tel" placeholder="Телефон" name="phone" required>
@@ -836,7 +1056,7 @@
                     <div class="modal__title">Оставить заявку</div>
                     <div class="modal__caption">Оставьте свой номер телефона и мы вам перезвоним. В рабочее время перезвоним в течение 15 минут</div>
                 </div>
-                <form class="form modal__form" action="#">
+                <form class="form modal__form" method="POST" action="mail.php">
                     <div class="form__body">
                         <div class="form__field">
                             <input class="form__input" type="text" placeholder="Имя" name="name" required>
@@ -867,7 +1087,7 @@
                     <div class="modal__title">Заказать автобус</div>
                     <div class="modal__caption">Оставьте свой номер телефона и мы вам перезвоним. В рабочее время перезвоним в течение 15 минут</div>
                 </div>
-                <form class="form modal__form" action="#">
+                <form class="form modal__form" method="POST" action="mail.php">
                     <div class="form__body">
                         <div class="form__field">
                             <input class="form__input" type="text" placeholder="Имя" name="name" required>
