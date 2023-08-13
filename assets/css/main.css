@@ -1733,6 +1733,9 @@ h2 {
 .form__field:last-child {
   margin-bottom: 0;
 }
+.form__field.error input {
+  border-color: red;
+}
 .form__input {
   padding: 10px 24px;
   width: 100%;

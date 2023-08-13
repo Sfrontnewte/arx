@@ -585,7 +585,7 @@ const catalog = new Catalog('js-section-sorting', 'js-catalog-modal .modal-galle
 document.querySelector('.js-modal').addEventListener('submit', function(e){
   let name = document.querySelector('.js-modal input[type="text"]');
   let tel = document.querySelector('.js-modal input[type="tel"]');
-
+  
   if(name.value.length <= 2){
       name.parentNode.classList.add('error');
   } else {
@@ -599,28 +599,27 @@ document.querySelector('.js-modal').addEventListener('submit', function(e){
   }
 
 
-  if(name.value.length >= 3 && tel.value.length){
-      e.preventDefault();
-      var request = new XMLHttpRequest();
-      request.onreadystatechange = function() { 
+  if(name && name.value.length >= 3 && tel && tel.value.length){
+    e.preventDefault();
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function() { 
 
-          if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-              console.log('success');
-              document.querySelector('.js-modal.active').classList.remove('active');
-              document.querySelector('.js-success-modal').style.display = 'inline-flex';
-              name.value = "";
-              tel.value = "";
-          }
-      }
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            console.log('success');
+            document.querySelector('.js-modal.active').classList.remove('active');
+            document.querySelector('.js-success-modal').style.display = 'inline-flex';
+            name.value = "";
+            tel.value = "";
+        }
+    }
 
-          request.open(this.method, this.action, true);
+    request.open(this.method, this.action, true);
 
-          var data = new FormData(this);
-          for (var key of data.keys());
-              
-          request.send(data);
+    var data = new FormData(this);
+    for (var key of data.keys());
+        
+    request.send(data);
   } else {
-      e.preventDefault();
+    e.preventDefault();
   }
-  
 });

@@ -1024,39 +1024,39 @@
             </div>
         </footer>
         <!-- modal-->
-        <div class="modal js-modal" data-modal="callback">
+        <form class="modal js-modal" data-modal="callback" method="POST" action="mail.php">
             <div class="modal__close js-close-modal"></div>
             <div class="modal__inner">
                 <div class="modal__header">
                     <div class="modal__title">Заказать звонок</div>
                     <div class="modal__caption">Оставьте свой номер телефона и мы вам перезвоним. В рабочее время перезвоним в течение 15 минут</div>
                 </div>
-                <form class="form modal__form" method="POST" action="mail.php">
+                <div class="form modal__form">
                     <div class="form__body">
                         <div class="form__field">
                             <input class="form__input" type="tel" placeholder="Телефон" name="phone" required>
                         </div>
                     </div>
                     <div class="form__footer">
-                        <button class="btn is-orange form__send" type="submit">Оставить заявку</button>
+                        <button class="btn is-orange form__send">Оставить заявку</button>
                     </div>
-                </form>
+                </div>
                 <div class="modal__footer">
                     <div class="modal__policy">Нажимая на кнопку вы соглашаетесь на обработку <a href="#">персональных данных</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
         <!-- end modal-->
         <!-- modal-->
-        <div class="modal js-modal" data-modal="order">
+        <form class="modal js-modal" data-modal="order" method="POST" action="mail.php">
             <div class="modal__close js-close-modal"></div>
             <div class="modal__inner">
                 <div class="modal__header">
                     <div class="modal__title">Оставить заявку</div>
                     <div class="modal__caption">Оставьте свой номер телефона и мы вам перезвоним. В рабочее время перезвоним в течение 15 минут</div>
                 </div>
-                <form class="form modal__form" method="POST" action="mail.php">
+                <div class="form modal__form">
                     <div class="form__body">
                         <div class="form__field">
                             <input class="form__input" type="text" placeholder="Имя" name="name" required>
@@ -1071,23 +1071,23 @@
                     <div class="form__footer">
                         <button class="btn is-orange form__send" type="submit">Оставить заявку</button>
                     </div>
-                </form>
+                </div>
                 <div class="modal__footer">
                     <div class="modal__policy">Нажимая на кнопку вы соглашаетесь на обработку <a href="#">персональных данных</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
         <!-- end modal-->
         <!-- modal-->
-        <div class="modal js-modal" data-modal="bus">
+        <form class="modal js-modal" data-modal="bus" method="POST" action="mail.php">
             <div class="modal__close js-close-modal"></div>
             <div class="modal__inner">
                 <div class="modal__header">
                     <div class="modal__title">Заказать автобус</div>
                     <div class="modal__caption">Оставьте свой номер телефона и мы вам перезвоним. В рабочее время перезвоним в течение 15 минут</div>
                 </div>
-                <form class="form modal__form" method="POST" action="mail.php">
+                <div class="form modal__form">
                     <div class="form__body">
                         <div class="form__field">
                             <input class="form__input" type="text" placeholder="Имя" name="name" required>
@@ -1143,13 +1143,13 @@
                     <div class="form__footer">
                         <button class="btn is-orange form__send" type="submit">Оставить заявку</button>
                     </div>
-                </form>
+                </div>
                 <div class="modal__footer">
                     <div class="modal__policy">Нажимая на кнопку вы соглашаетесь на обработку <a href="#">персональных данных</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
         <!-- end modal-->
         <script src="assets/js/main.min.js"></script>
         <script src="assets/js/separate-js/common.js"></script>
