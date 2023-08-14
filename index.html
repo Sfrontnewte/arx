@@ -9,14 +9,8 @@
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta content="telephone=no" name="format-detection">
         <meta name="HandheldFriendly" content="true">
-
-        <!--[if (gt IE 9)|!(IE)]><!-->
         <link href="assets/css/main.min.css" rel="stylesheet" type="text/css">
-        <!--<![endif]-->
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <script>
-            (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
-        </script>
     </head>
 
     <body class="page">
@@ -28,7 +22,7 @@
                     <img src="assets/img/general/logo.svg" alt=""><span>Пассажирские перевозки  <br> в Архангельске и по России</span>
                 </a>
                 <div class="header__actions"> <a class="header__phone" href="tel:+79004597887">+7 900 459 78 87</a>
-                    <button class="header__callback btn js-open-modal" data-modal="callback">Заказать звонок</button>
+                    <button class="header__callback btn js-open-modal" data-modal="order1">Заказать звонок</button>
                     <div class="header__menu-btn">
                         <img src="assets/img/general/menu-icon.svg" alt="">
                     </div>
@@ -56,7 +50,7 @@
                     </li>
                 </ul>
                 <div class="header-menu__actions"> <a class="header-menu__phone" href="tel:+79004597887">+7 900 459 78 87</a>
-                    <button class="btn is-orange header-menu__button js-open-modal" data-modal="callback">Заказать звонок</button>
+                    <button class="btn is-orange header-menu__button js-open-modal" data-modal="order1">Заказать звонок</button>
                 </div>
             </div>
         </div>
@@ -986,16 +980,16 @@
                         </li>
                     </ul>
                 </div>
-                <form class="form feedback__form" action="#">
+                <form class="form feedback__form js-form" method="POST" action="send.php">
                     <div class="form__body">
                         <div class="form__field">
-                            <input class="form__input" type="text" placeholder="Имя" name="name" required>
+                            <input class="form__input" type="text" placeholder="Имя" name="name">
                         </div>
                         <div class="form__field">
-                            <input class="form__input" type="text" placeholder="Телефон" name="phone" required>
+                            <input class="form__input" type="tel" placeholder="Телефон" name="phone">
                         </div>
                         <div class="form__field">
-                            <textarea class="form__textarea" placeholder="Текст сообщения" name="textarea" required></textarea>
+                            <textarea class="form__textarea" placeholder="Текст сообщения" name="textarea"></textarea>
                         </div>
                     </div>
                     <div class="form__footer">
@@ -1023,32 +1017,6 @@
                 <button class="btn is-orange footer__button js-open-modal" data-modal="order">Оставить заявку</button>
             </div>
         </footer>
-        <!-- modal-->
-        <form class="modal js-modal" data-modal="callback" method="POST" action="send.php">
-            <div class="modal__close js-close-modal"></div>
-            <div class="modal__inner">
-                <div class="modal__header">
-                    <div class="modal__title">Заказать звонок</div>
-                    <div class="modal__caption">Оставьте свой номер телефона и мы вам перезвоним. В рабочее время перезвоним в течение 15 минут</div>
-                </div>
-                <div class="form modal__form">
-                    <div class="form__body">
-                        <div class="form__field">
-                            <input class="form__input" type="tel" placeholder="Телефон" name="phone" required>
-                        </div>
-                    </div>
-                    <div class="form__footer">
-                        <button class="btn is-orange form__send">Оставить заявку</button>
-                    </div>
-                </div>
-                <div class="modal__footer">
-                    <div class="modal__policy">Нажимая на кнопку вы соглашаетесь на обработку <a href="#">персональных данных</a>
-                    </div>
-                </div>
-            </div>
-        </form>
-        <!-- end modal-->
-        <!-- modal-->
         <form class="modal js-modal" data-modal="order" method="POST" action="send.php">
             <div class="modal__close js-close-modal"></div>
             <div class="modal__inner">
@@ -1059,10 +1027,10 @@
                 <div class="form modal__form">
                     <div class="form__body">
                         <div class="form__field">
-                            <input class="form__input" type="text" placeholder="Имя" name="name" required>
+                            <input class="form__input" type="text" placeholder="Имя" name="name">
                         </div>
                         <div class="form__field">
-                            <input class="form__input" type="tel" placeholder="Телефон" name="phone" required>
+                            <input class="form__input" type="tel" placeholder="Телефон" name="phone">
                         </div>
                         <div class="form__field">
                             <textarea class="form__textarea" placeholder="Текст сообщения" name="textarea"></textarea>
@@ -1078,8 +1046,6 @@
                 </div>
             </div>
         </form>
-        <!-- end modal-->
-        <!-- modal-->
         <form class="modal js-modal" data-modal="bus" method="POST" action="send.php">
             <div class="modal__close js-close-modal"></div>
             <div class="modal__inner">
@@ -1090,10 +1056,10 @@
                 <div class="form modal__form">
                     <div class="form__body">
                         <div class="form__field">
-                            <input class="form__input" type="text" placeholder="Имя" name="name" required>
+                            <input class="form__input" type="text" placeholder="Имя" name="name">
                         </div>
                         <div class="form__field">
-                            <input class="form__input" type="tel" placeholder="Телефон" name="phone" required>
+                            <input class="form__input" type="tel" placeholder="Телефон" name="phone">
                         </div>
                         <div class="form__field">
                             <div class="form__grid">
@@ -1150,7 +1116,37 @@
                 </div>
             </div>
         </form>
-        <!-- end modal-->
+        <form class="modal js-modal" data-modal="order1" method="POST" action="send.php">
+            <div class="modal__close js-close-modal"></div>
+            <div class="modal__inner">
+                <div class="modal__header">
+                    <div class="modal__title">Заказать звонок</div>
+                    <div class="modal__caption">Оставьте свой номер телефона и мы вам перезвоним. В рабочее время перезвоним в течение 15 минут</div>
+                </div>
+                <div class="form modal__form">
+                    <div class="form__body">
+                        <div class="form__field">
+                            <input class="form__input" type="hidden" placeholder="hidden" name="name">
+                            <input class="form__input" type="tel" placeholder="Телефон" name="phone">
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <button class="btn is-orange form__send" type="submit">Оставить заявку</button>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <div class="modal__policy">Нажимая на кнопку вы соглашаетесь на обработку <a href="#">персональных данных</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="thanks js-success-modal">
+            <div class="thanks__close js-close-modal"></div>
+            <img class="thanks__photo" src="assets/img/general/thanks.svg " alt="">
+            <div class="thanks__title">Спасибо!</div>
+            <div class="thanks__text">Ваша заявка принята, скоро мы с вами свяжемся</div>
+            <div class="btn is-orange thanks__button js-close-modal">Вернуться</div>
+        </div>
         <script src="assets/js/main.min.js"></script>
         <script src="assets/js/separate-js/common.js"></script>
 

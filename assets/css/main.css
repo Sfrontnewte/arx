@@ -503,8 +503,8 @@ h2 {
 .header.sticky {
   background: #fff;
   z-index: 85;
-  -webkit-box-shadow: 0px -2px 39px 0px rgba(250, 132, 0, 0.25);
-          box-shadow: 0px -2px 39px 0px rgba(250, 132, 0, 0.25);
+  -webkit-box-shadow: 0px -2px 39px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px -2px 39px 0px rgba(0, 0, 0, 0.25);
 }
 .header.sticky .header__logo img {
   -webkit-filter: invert(1);
@@ -1058,6 +1058,12 @@ h2 {
     padding-right: 24px;
   }
 }
+@media (max-width: 374px) {
+  .order__phone {
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+}
 .order__links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1099,6 +1105,11 @@ h2 {
     font-size: 18px;
   }
 }
+@media (max-width: 374px) {
+  .order__links a {
+    font-size: 12px;
+  }
+}
 .order__links ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1116,6 +1127,11 @@ h2 {
 @media (min-width: 992px) {
   .order__links ul li {
     margin-right: 24px;
+  }
+}
+@media (max-width: 374px) {
+  .order__links ul li {
+    margin-right: 15px;
   }
 }
 .order__links ul li:last-child {
@@ -2008,6 +2024,15 @@ h2 {
   padding: 16px;
   border-radius: 8px;
   background: #FFF;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.catalog-card:hover {
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 0px -2px 39px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px -2px 39px 0px rgba(0, 0, 0, 0.25);
 }
 @media (min-width: 992px) {
   .catalog-card {
@@ -2365,6 +2390,8 @@ h2 {
   -webkit-box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.04);
           box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.04);
   padding: 80px 24px 40px;
+  overflow: auto;
+  max-height: 100%;
 }
 @media (min-width: 992px) {
   .modal {
@@ -2658,7 +2685,7 @@ h2 {
   display: none;
 }
 .modal-gallery__inner {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -2768,6 +2795,10 @@ h2 {
   .modal-gallery.js-catalog-modal .modal-gallery__slider {
     max-width: 570px;
   }
+}
+.modal-gallery .catalog-card {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 @media (max-width: 991px) {
   .modal-gallery .catalog-card {
@@ -2919,6 +2950,69 @@ h2 {
   .modal-gallery .catalog-card__btn.btn.is-orange {
     width: 39%;
   }
+}
+
+.js-success-modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  max-height: 428px;
+  z-index: 105;
+}
+
+.thanks {
+  padding: 54px 16px 48px 16px;
+  max-width: 343px;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background: #FFFFFF;
+  border-radius: 16px;
+  max-width: 343px;
+  margin: auto;
+}
+.thanks__photo {
+  margin-bottom: 20px;
+}
+.thanks__title {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  color: #121212;
+}
+.thanks__text {
+  max-width: 311px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+  color: #121212;
+  font-size: 16px;
+  line-height: 150%;
+}
+.thanks__button {
+  max-width: 150px;
+  width: 100%;
+  height: 56px !important;
+  margin: 0 auto;
+}
+.thanks__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='4.63184' y='19.2921' width='22.5' height='1.875' rx='0.9375' transform='rotate(-45 4.63184 19.2921)' fill='%23111111'/%3E%3Crect x='5.95801' y='3.38214' width='22.5' height='1.875' rx='0.9375' transform='rotate(45 5.95801 3.38214)' fill='%23111111'/%3E%3C/svg%3E%0A");
 }
 
 @-webkit-keyframes splide-loading {

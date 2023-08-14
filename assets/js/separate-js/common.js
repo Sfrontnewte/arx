@@ -325,6 +325,18 @@ class ModalManager {
   }
 }
 
+
+var succesClose = document.querySelectorAll('.js-success-modal .js-close-modal');
+
+succesClose.forEach(function(item){
+
+  item.addEventListener('click', function(e) {
+    document.querySelector('.page').classList.remove('is-modal');
+    document.querySelector('.js-success-modal').style.display = 'none';
+  });
+
+}); 
+
 const modalManager = new ModalManager();
 
 var eventCalllback = function (e) {
@@ -579,47 +591,149 @@ class Catalog {
 
 const catalog = new Catalog('js-section-sorting', 'js-catalog-modal .modal-gallery__content');
 
+let forms = document.querySelectorAll('.js-modal');
 
+forms.forEach(function(form) {
+    let name = form.querySelector('input[type="text"]');
+    let tel = form.querySelector('input[type="tel"]');
+    let textarea = form.querySelector('textarea');
+    let inputs = form.querySelectorAll("input");
 
+    form.addEventListener('submit', function(e) {
 
-document.querySelector('.js-modal').addEventListener('submit', function(e){
-  let name = document.querySelector('.js-modal input[type="text"]');
-  let tel = document.querySelector('.js-modal input[type="tel"]');
-  
-  if(name.value.length <= 2){
-      name.parentNode.classList.add('error');
-  } else {
-      name.parentNode.classList.remove('error');
-  }
-
-  if(tel.value.length <= 11){
-      tel.parentNode.classList.add('error');
-  } else {
-      tel.parentNode.classList.remove('error');
-  }
-
-
-  if(name && name.value.length >= 3 && tel && tel.value.length){
-    e.preventDefault();
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function() { 
-
-        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-            console.log('success');
-            document.querySelector('.js-modal.active').classList.remove('active');
-            document.querySelector('.js-success-modal').style.display = 'inline-flex';
-            name.value = "";
-            tel.value = "";
+      if(name){
+        let nameValue = name.value.trim();
+        if (nameValue.length <= 2) {
+          name.parentNode.classList.add('error');
+        } else {
+          name.parentNode.classList.remove('error');
         }
-    }
+      }
 
-    request.open(this.method, this.action, true);
+      if(tel){
+        let telValue = tel.value.trim();
 
-    var data = new FormData(this);
-    for (var key of data.keys());
-        
-    request.send(data);
-  } else {
-    e.preventDefault();
-  }
+        if (telValue.length <= 11) {
+          tel.parentNode.classList.add('error');
+        } else {
+          tel.parentNode.classList.remove('error');
+        }
+      }
+
+      if(inputs){
+        inputsValue = inputs
+
+        inputs.forEach(input => {
+          let inputsValue = input.value.trim();
+
+          if (inputsValue.length <= 0) {
+            input.parentNode.classList.add('error');
+          } else {
+            input.parentNode.classList.remove('error');
+          }
+        });
+      }
+
+      if ((name && name.value.length >= 3) || (tel && tel.value.length >= 11)) {
+        e.preventDefault();
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function() { 
+          if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            console.log('success');
+            form.classList.remove('active');
+            document.querySelector('.js-success-modal').style.display = 'inline-flex';
+
+            if(name){
+              name.value = "";
+            }
+
+            if(tel){
+              tel.value = "";
+            }
+
+            if(textarea){
+              textarea.value = "";
+            }
+
+            if(inputs){
+              inputs.forEach(input => {
+                input.value = "";
+              });
+            }
+          }
+      }
+
+        request.open(form.method, form.action, true);
+
+        var data = new FormData(form);
+        request.send(data);
+      } else {
+        e.preventDefault();
+      }
+    });
+});
+
+
+
+
+let formsStatic = document.querySelectorAll('.js-form');
+
+formsStatic.forEach(function(form) {
+    let name = form.querySelector('input[type="text"]');
+    let tel = form.querySelector('input[type="tel"]');
+    let textarea = form.querySelector('textarea');
+
+    form.addEventListener('submit', function(e) {
+
+      if(name){
+        let nameValue = name.value.trim();
+        if (nameValue.length <= 2) {
+          name.parentNode.classList.add('error');
+        } else {
+          name.parentNode.classList.remove('error');
+        }
+      }
+
+      if(tel){
+        let telValue = tel.value.trim();
+
+        if (telValue.length <= 11) {
+          tel.parentNode.classList.add('error');
+        } else {
+          tel.parentNode.classList.remove('error');
+        }
+      }
+
+      if (name.value.length >= 3 && tel.value.length >= 11) {
+        e.preventDefault();
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function() { 
+          if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            console.log('success');
+            form.classList.remove('active');
+            document.querySelector('body').classList.add('is-modal');
+            document.querySelector('.js-success-modal').style.display = 'inline-flex';
+
+            if(name){
+              name.value = "";
+            }
+
+            if(tel){
+              tel.value = "";
+            }
+
+            if(textarea){
+              textarea.value = "";
+            }
+          }
+      }
+
+        request.open(form.method, form.action, true);
+
+        var data = new FormData(form);
+        request.send(data);
+      } else {
+        e.preventDefault();
+      }
+    });
 });

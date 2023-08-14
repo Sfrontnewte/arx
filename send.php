@@ -11,18 +11,24 @@ if (!error_get_last()) {
     $name = $_POST['name'] ;
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $text = $_POST['text'];
+    $text = $_POST['textarea'];
     $file = $_FILES['myfile'];
-    
+    $bus_type = $_POST['bus_type'];
+    $bus_target = $_POST['bus_target'];
+    $bus_date = $_POST['bus_date'];
+    $bus_time = $_POST['bus_time'];
     
     // Формирование самого письма
     $title = "Заголовок письма";
     $body = "
     <h2>Новое письмо</h2>
     <b>Имя:</b> $name<br>
-    <b>Почта:</b> $email<br><br>
     <b>phone:</b> $phone<br><br>
-    <b>Сообщение:</b><br>$text
+    <b>Сообщение:</b><br>$text<br><br>
+    <b>bus_type:</b> $bus_type<br><br>
+    <b>bus_target:</b> $bus_target<br><br>
+    <b>bus_date:</b> $bus_date<br><br>
+    <b>bus_time:</b> $bus_time<br><br>
     ";
     
     // Настройки PHPMailer
@@ -50,7 +56,6 @@ if (!error_get_last()) {
     $mail->setFrom('smtp.gmail.com', 'Имя отправителя'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('dimitrov95h@gmail.com');  
     $mail->addAddress('sergenius95@gmail.com'); // Ещё один, если нужен
     
     // Прикрипление файлов к письму
@@ -86,15 +91,3 @@ header('Content-Type: application/json');
 echo json_encode($data);
 
 ?>
-Здесь вам нужно отредактировать эти поля под себя:
-// Настройки вашей почты
-$mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
-$mail->Username   = 'username'; // Логин на почте
-$mail->Password   = 'password'; // Пароль на почте
-$mail->SMTPSecure = 'ssl';
-$mail->Port       = 465;
-$mail->setFrom('username@yandex.ru', 'Name'); // Адрес самой почты и имя отправителя
-
-// Получатель письма
-$mail->addAddress('poluchatel@ya.ru');  
-$mail->addAddress('poluchatel2@gmail.com'); // Ещё один, если нужен
