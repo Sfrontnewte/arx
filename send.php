@@ -1,56 +1,40 @@
 <?php
- 
-require 'PHPMailerAutoload.php';
- 
-$mail = new PHPMailer;
- 
-$mail->isSMTP();
-$mail->Host = 'smtp.gmail.com';
-$mail->SMTPAuth = true;
-$mail->Username = 'sergenius95@gmail.com';    //Логин
-$mail->Password = 'geiaixgtfpnpucbu';
-$mail->SMTPSecure = 'ssl';
-$mail->Port = 465;
- 
-$mail->setFrom('avacode121@gmail.com', 'Robot');
-$mail->isHTML(true);
- 
-$mail->Subject = 'Тема письма';
-$mail->Body    = '<b>HTML</b> версия письма';
-$mail->AltBody = 'Текстовая версия письма, без HTML тегов (для клиентов не поддерживающих HTML)';
- 
-//Отправка сообщения
-if(!$mail->send()) {
-    echo 'Ошибка при отправке. Ошибка: ' . $mail->ErrorInfo;
-} else {
-    echo 'Сообщение успешно отправлено';
-}
-
-
-<?php
 // Файлы phpmailer
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-// Переменные, которые отправляет пользователь
-$name = $_POST['name'];
-$email = $_POST['email'];
-$text = $_POST['text'];
-$file = $_FILES['myfile'];
+# проверка, что ошибки нет
+if (!error_get_last()) {
 
-// Формирование самого письма
-$title = "Заголовок письма";
-$body = "
-<h2>Новое письмо</h2>
-<b>Имя:</b> $name<br>
-<b>Почта:</b> $email<br><br>
-<b>Сообщение:</b><br>$text
-";
-
-// Настройки PHPMailer
-$mail = new PHPMailer\PHPMailer\PHPMailer();
-try {
+    // Переменные, которые отправляет пользователь
+    $name = $_POST['name'] ;
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $text = $_POST['text'];
+    $file = $_FILES['myfile'];
+    
+    
+    // Формирование самого письма
+    $title = "Заголовок письма";
+    $body = "
+    <h2>Новое письмо</h2>
+    <b>Имя:</b> $name<br>
+    <b>Почта:</b> $email<br><br>
+    <b>phone:</b> $phone<br><br>
+    <b>Сообщение:</b><br>$text
+    ";
+    
+    // Настройки PHPMailer
+    $mail = new PHPMailer\PHPMailer\PHPMailer();
+    
+    $mail->isSMTP();   
+    $mail->CharSet = "UTF-8";
+    $mail->SMTPAuth   = true;
+    //$mail->SMTPDebug = 2;
+    $mail->Debugoutput = function($str, $level) {$GLOBALS['data']['debug'][] = $str;};
+    
+    // Настройки вашей почты
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
@@ -68,33 +52,49 @@ try {
     // Получатель письма
     $mail->addAddress('dimitrov95h@gmail.com');  
     $mail->addAddress('sergenius95@gmail.com'); // Ещё один, если нужен
-
+    
     // Прикрипление файлов к письму
     if (!empty($file['name'][0])) {
-        for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
-            $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
-            $filename = $file['name'][$ct];
-            if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
-                $mail->addAttachment($uploadfile, $filename);
-                $rfile[] = "Файл $filename прикреплён";
-            } else {
-                $rfile[] = "Не удалось прикрепить файл $filename";
-            }
-        }   
+        for ($i = 0; $i < count($file['tmp_name']); $i++) {
+            if ($file['error'][$i] === 0) 
+                $mail->addAttachment($file['tmp_name'][$i], $file['name'][$i]);
+        }
     }
-// Отправка сообщения
-$mail->isHTML(true);
-$mail->Subject = $title;
-$mail->Body = $body;    
-
-// Проверяем отравленность сообщения
-if ($mail->send()) {$result = "success";} 
-else {$result = "error";}
-
-} catch (Exception $e) {
-    $result = "error";
-    $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
+    // Отправка сообщения
+    $mail->isHTML(true);
+    $mail->Subject = $title;
+    $mail->Body = $body;    
+    
+    // Проверяем отправленность сообщения
+    if ($mail->send()) {
+        $data['result'] = "success";
+        $data['info'] = "Сообщение успешно отправлено!";
+    } else {
+        $data['result'] = "error";
+        $data['info'] = "Сообщение не было отправлено. Ошибка при отправке письма";
+        $data['desc'] = "Причина ошибки: {$mail->ErrorInfo}";
+    }
+    
+} else {
+    $data['result'] = "error";
+    $data['info'] = "В коде присутствует ошибка";
+    $data['desc'] = error_get_last();
 }
 
-// Отображение результата
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+// Отправка результата
+header('Content-Type: application/json');
+echo json_encode($data);
+
+?>
+Здесь вам нужно отредактировать эти поля под себя:
+// Настройки вашей почты
+$mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
+$mail->Username   = 'username'; // Логин на почте
+$mail->Password   = 'password'; // Пароль на почте
+$mail->SMTPSecure = 'ssl';
+$mail->Port       = 465;
+$mail->setFrom('username@yandex.ru', 'Name'); // Адрес самой почты и имя отправителя
+
+// Получатель письма
+$mail->addAddress('poluchatel@ya.ru');  
+$mail->addAddress('poluchatel2@gmail.com'); // Ещё один, если нужен
